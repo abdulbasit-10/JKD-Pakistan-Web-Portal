@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes reverseScroll {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
+
+  .animate-scroll {
+    display: flex;
+    animation: scroll 30s linear infinite;
+    animation-play-state: running; /* default */
+  }
+
+  .animate-reverse-scroll {
+    display: flex;
+    animation: reverseScroll  30s linear infinite;
+    animation-play-state: running; /* default */
+  }
+
+/* .program-card:hover ~ .animate-scroll,
+.program-card:hover {
+  animation-play-state: paused !important;
+} */
+ .animate-scroll:hover {
+  animation-play-state: paused !important;
+}
+
+@keyframes gentleFloatLeft {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-8px) translateX(-4px);
+  }
+}
+
+@keyframes gentleFloatRight {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-8px) translateX(4px);
+  }
+}
+
+.animate-gentle-float-left {
+  animation: gentleFloatLeft 4.2s ease-in-out infinite;
+}
+
+.animate-gentle-float-right {
+  animation: gentleFloatRight 4.2s ease-in-out infinite;
+}

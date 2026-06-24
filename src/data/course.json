@@ -1,0 +1,1107 @@
+[
+  {
+    "id": "web-development",
+    "title": "Full Stack Web Development Course",
+    "image": "/mernStack.png",
+    "description": [
+      "3 months professional development program. \nMaster modern full-stack development with MERN, MEAN & PERN technologies."
+    ],
+    "courseDuration": "3 Months Program",
+    "desc":"Comprehensive curriculum designed for rapid skill development",
+    "training":"Hands-on Training",
+    "trainingDesc":"Learn by Real-world projects",
+    "focusOnTrade": "IT Focused",
+    "focusedOn":"Job-ready Full-stack web development Skill",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "End-to-end application building",
+    "learningOutcomes": [
+      "Full Web Development (Frontend + Backend),            Express, React, Node)",
+      "Frontend development with React & Angular",
+      "Backend development with Node & Express",
+      "MongoDB & PostgreSQL database management",
+      "API creation & secure authentication",
+      "REST API development & authentication systemsDatabase integration & backend logic",
+      "State management (Redux, Context API)",
+      "Version control with Git & GitHub",
+      "Testing, debugging & performance optimization",
+      "Cloud deployment & hosting (AWS, Vercel, Netlify)",
+      "Basic DevOps & CI/CD concepts",
+      "Freelancing, interview prep, CV & project presentation skills"
+    ],
+    "carrer": "With 37+ lectures, 55+ hours of guided content, and multiple hands-on projects, this program ensures a deep, practical learning experience that prepares you for both employment and entrepreneurship in the ever-evolving tech world."
+  },
+  {
+    "id": "app-development",
+    "title": "Mobile App Development Course (Flutter + React Native)",
+    "image": "/meanStack.png",
+    "description": [
+      "3-Months cross-platform app development program. \nBuild, deploy & manage mobile applications for Android & iOS."
+    ],
+    "courseDuration": "3 Months",
+    "desc":"Comprehensive curriculum designed for rapid skill development",
+    "training":"Hands-on Training",
+    "trainingDesc":"Learn by Real-world app projects",
+    "focusOnTrade": "IT Focused",
+    "focusedOn":"Job-ready Mobile app development skill",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "End-to-end app creation",
+    "learningOutcomes": [
+      "Build cross-platform apps using Flutter & React Native",
+      "Understand Dart & JavaScript for mobile development",
+      "Design responsive and modern mobile UIs",
+      "Implement navigation, APIs & real-time data",
+      "Work with device features like camera & GPS",
+      "Manage app state and optimize performance",
+      "Debug, test & improve app efficiency",
+      "Deploy apps on Play Store & App Store",
+      "Use Git & GitHub for version control",
+      "Modern app architecture & best practicesCloud deployment & hosting (AWS, Vercel, Netlify)",
+      "Build real-world projects and portfolio apps"
+    ],
+    "carrer": "With 37+ interactive sessions, over 55 hours of hands-on content, and multiple live projects, this course ensures a practical, real-world learning experience. Whether you aim to start a career as a Full Stack Developer or enhance your technical skillset for freelancing, the MEAN Stack Development Course equips you with the tools, confidence, and portfolio to succeed in today’s competitive tech landscape."
+  },
+  {
+    "id": "pern-stack",
+    "title": "PERN Stack Development Course",
+    "image": "/pernStack.png",
+    "description": [
+      "3-Months professional full-stack development program.\nBuild scalable web applications using PostgreSQL, Express, React & Node."
+    ],
+    "courseDuration": "3 Months",
+    "desc":"Comprehensive curriculum designed for rapid skill development",
+    "training":"Hands-on Training",
+    "trainingDesc":"Learn by Real-world projects",
+    "focusOnTrade": "IT Focused",
+    "focusedOn":"Job-ready Full-stack web development Skill",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "End-to-end application building",
+    "learningOutcomes": [
+      "Full-stack development with PERN (PostgreSQL, Express, React, Node)",
+      "SQL & relational database management",
+      "REST API development & authentication systems",
+      "Responsive UI design with React.js",
+      "State management using Redux.",
+      "Database integration & backend logic",
+      "Version control with Git & GitHub",
+      "Testing & debugging applications",
+      "Cloud deployment & hosting",
+      "Gain freelancing and interview skills, including CV preparation and project presentation."
+    ],
+    "carrer": "With 37+ interactive sessions, over 55 hours of hands-on content, and multiple live projects, this course ensures a practical, real-world learning experience. Whether you aim to start a career as a Full Stack Developer or enhance your technical skillset for freelancing, the MEAN Stack Development Course equips you with the tools, confidence, and portfolio to succeed in today’s competitive tech landscape."
+  },
+  {
+    "id": "digital-marketing",
+    "title": "Digital Marketing \n Course",
+    "image": "/meanStack.png",
+    "description": [
+      "3-Months Professional Training Program. \n Master complete digital marketing skills from paid ads to organic growth and customer conversion systems."
+    ],
+    "courseDuration": "3 Months",
+    "desc":"Comprehensive curriculum designed for rapid skill development",
+    "training":"Hands-on Training",
+    "trainingDesc":"Learn by Real Campaign Creation & Execution",
+    "focusOnTrade": "IT Focused",
+    "focusedOn":"Job-ready digital marketing skills",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "From Strategy to execution",
+    "learningOutcomes": [
+      "Fundamentals of digital marketing strategy",
+      "Google Ads campaign setup & optimization",
+      "Social media marketing for major platforms",
+      "Content creation and marketing strategy",
+      "SEO-friendly writing and optimization basics",
+      "Email marketing campaigns and automation flows",
+      "Audience targeting and customer segmentation",
+      "Copywriting for ads and marketing content",
+      "Campaign performance tracking and reporting",
+      "Lead generation and conversion basics",
+      "Marketing funnel creation and optimization",
+      "Hands-on experience with real marketing projects"
+    ],
+    "carrer": "With over 37 sessions, 50+ hours of hands-on training, and real project development, this course provides an end-to-end learning experience that bridges theory with practice. By completing the Flutter App Development Course, you’ll not only master the tools — you’ll master the craft of building sleek, powerful, and scalable mobile applications for a global audience."
+  },
+  {
+    "id": "react-native",
+    "title": "React Native Development Course",
+    "description": [
+      "3-Months cross-platform mobile development program.\nBuild high-performance apps for Android & iOS using React Native."
+    ],
+    "image": "/reactNative.png",
+    "courseDuration": "3 Months",
+    "desc":"Comprehensive curriculum designed for rapid skill development",
+    "training":"Hands-on Training",
+    "trainingDesc":"Learn by Real-world projects",
+    "focusOnTrade": "IT Focused",
+    "focusedOn":"Job-ready Full-stack web development Skill",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "End-to-end application building",
+    "learningOutcomes": [
+      "React Native components, state & styling",
+      "UI development for mobile applications",
+      "Navigation & user interaction handling",
+      "API integration & data fetching",
+      "Local storage & offline functionality",
+      "Performance optimization & debugging",
+      "App deployment on Play Store & App Store",
+      "Real-world mobile app project experience"
+    ],
+    "carrer": "Through this course, students will develop the expertise needed to excel in mobile app development roles, creating high-quality cross-platform applications for both Android and iOS."
+  },
+  {
+    "id": "uiux-design",
+    "title": "Visual Design & UX \n Course",
+    "description": [
+      "3-Months Professional Training Program. \n Master Graphic Design, UI Design & User Experience Principles for modern digital products."
+    ],
+    "image": "/graphicDesinging.png",
+    "courseDuration": "3 Months",
+    "desc":"Comprehensive curriculum designed for rapid skill development",
+    "training":"Hands-on Training",
+    "trainingDesc":"Learn by Real-world app projects",
+    "focusOnTrade": "IT Focused",
+    "focusedOn":"Job-ready graphic UI/UX &  design skills",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Creative & technical skills",
+    "learningOutcomes": [
+      "Graphic design fundamentals (typography, layout,     composition)",
+      "Color theory and visual hierarchy basics",
+      "Logo design and brand identity creation",
+      "UI design for mobile apps and websites",
+      "UX fundamentals and user-centered design approach",
+      "User research basics (personas & simple user journeys)",
+      "Wireframing from low to high fidelity",
+      "Prototyping & Responsive design",
+      "Adobe Photoshop, Illustrator, Figma & Canva for design work",
+      "Basic usability principles and accessibility awareness",
+      "Portfolio building with real-world design projects"
+    ],
+    "programBinits": [
+      "Hands-on learning through real-world projects and interactive design challenges.",
+      "Mentorship and feedback from experienced designers and industry professionals.",
+      "Portfolio development for showcasing your best work to clients or hiring managers.",
+      "Guidance on freelancing, job interviews, and client communication for career success."
+    ]
+  },
+  {
+    "id": "graphic-design",
+    "title": "Graphic Designing Course",
+    "description": [
+      "3-Months creative design program.\nMaster visual communication, branding & digital design."
+    ],
+    "image": "/graphicDesinging.png",
+    "courseDuration": "3 Months",
+    "desc":"Comprehensive curriculum designed for rapid skill development",
+    "training":"Hands-on Training",
+    "trainingDesc":"Learn by Real-world app projects",
+    "focusOnTrade": "IT Focused",
+    "focusedOn":"Job-ready graphic & digital design skills",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Creative & technical skills",
+    "learningOutcomes": [
+      "Core design principles & visual hierarchy",
+      "Professional tools (Photoshop, Illustrator, Figma, Canva)",
+      "Branding, logo & identity design",
+      "Social media & marketing creatives",
+      "Print & digital design (posters, packaging, layouts)",
+      "Photo editing & illustration basics",
+      "Portfolio development & presentation",
+      "Client communication & creative thinking"
+    ],
+    "programBinits": [
+      "Hands-on projects to apply creativity in real-world scenarios.",
+      "Expert mentorship from experienced graphic designers and visual artists.",
+      "Portfolio development guidance to prepare for clients or employers.",
+      "Access to industry-standard software and tools for professional practice.",
+      "Insights into freelancing, branding, and design business fundamentals."
+    ]
+  },
+  {
+    "id": "search-engine-marketing",
+    "title": "Search Engine Marketing (SEM) / Paid Ads Course",
+    "description": [
+      "3-Months digital marketing program.\nMaster paid advertising, campaign strategy & high-converting ad systems."
+    ],
+    "image": "/SEM.png",
+     "courseDuration": "3 Months",
+    "desc":"Comprehensive curriculum designed for rapid skill development",
+    "training":"Hands-on Training",
+    "trainingDesc":"Learn by Live ad campaigns",
+    "focusOnTrade": "IT Focused",
+    "focusedOn":"Job-ready paid ads & digital marketing skills",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "From Content to conversion",
+    "learningOutcomes": [
+      "Paid advertising (PPC) & campaign structure",
+      "Keyword research & audience targeting",
+      "Google Ads campaign setup & optimization",
+      "Ad copywriting & creative strategy",
+      "Budgeting, bidding & ROI optimization",
+      "Conversion tracking & analytics",
+      "A/B testing & performance scaling",
+      "Landing page optimization",
+      "Real-world campaign execution",
+      "Freelancing & client manage"
+    ],
+    "programBinits": [
+      "Hands-on projects to apply creativity in real-world scenarios.",
+      "Expert mentorship from experienced graphic designers and visual artists.",
+      "Portfolio development guidance to prepare for clients or employers.",
+      "Access to industry-standard software and tools for professional practice.",
+      "Insights into freelancing, branding, and design business fundamentals."
+    ]
+  },
+  {
+    "id": "social-media-marketing",
+    "title": "Social Media Marketing (SMM)",
+    "description": [
+      "3-Months digital marketing program.\nMaster social media strategy, content creation & brand growth."
+    ],
+    "image": "/SEM.png",
+     "courseDuration": "3 Months",
+    "desc":"Comprehensive curriculum designed for rapid skill development",
+    "training":"Hands-on Training",
+    "trainingDesc":"Learn by Real campaign projects",
+    "focusOnTrade": "Strategy Focused",
+    "focusedOn":"Job-ready Social media marketing",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "From Content to conversion",
+    "learningOutcomes": [
+      "Social media strategy & platform management",
+      "Content creation (posts, reels, stories)",
+      "Audience targeting & engagement growth",
+      "Paid ads on social media platforms",
+      "Content calendars & scheduling tools",
+      "Analytics & performance optimization",
+      "Branding & visual consistency",
+      "Influencer marketing basics",
+      "Campaign planning & execution",
+      "Freelancing & client handling"
+    ],
+    "programBinits": [
+      "Hands-on projects to apply creativity in real-world scenarios.",
+      "Expert mentorship from experienced graphic designers and visual artists.",
+      "Portfolio development guidance to prepare for clients or employers.",
+      "Access to industry-standard software and tools for professional practice.",
+      "Insights into freelancing, branding, and design business fundamentals."
+    ]
+  },
+  {
+    "id": "content-marketing-course",
+    "title": "Content Marketing Course",
+    "description": [
+      "3-Months Content Marketing Mastery Program. \n  Create powerful content strategies that attract, engage, and convert audiences across digital platforms."
+    ],
+    "image": "/contentMarketing.png",
+     "courseDuration": "3 Months",
+    "desc":"Comprehensive curriculum designed for rapid skill development",
+    "training":"Hands-on Training",
+    "trainingDesc":"Learn by Blogs, social posts, campaigns",
+    "focusOnTrade": "Strategy Focused",
+    "focusedOn":"From planning to execution",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Practical industry exposure",
+    "learningOutcomes": [
+      "Content marketing strategy & planning",
+      "Audience research & persona building",
+      "SEO-optimized content writing",
+      "Blogging, copywriting & storytelling",
+      "Social media content creation",
+      "Campaign content development  ",
+      "Content performance analysis",
+      "Brand voice & messaging development",
+      "Portfolio-ready content projects."
+    ],
+    "programBinits": [
+      "Hands-on projects to apply creativity in real-world scenarios.",
+      "Expert mentorship from experienced graphic designers and visual artists.",
+      "Portfolio development guidance to prepare for clients or employers.",
+      "Access to industry-standard software and tools for professional practice.",
+      "Insights into freelancing, branding, and design business fundamentals."
+    ]
+  },
+  {
+    "id": "email-marketing-course",
+    "title": "Email Marketing Course",
+    "description": [
+      "8–12 Week Email Marketing Mastery Program. \n  Build high-converting email campaigns that nurture leads, increase engagement, and drive sales."
+    ],
+    "image": "/contentMarketing.png",
+    "courseDuration": "3 Months",
+    "desc":"Comprehensive curriculum designed for rapid skill development",
+    "training":"Hands-on Training",
+    "trainingDesc":"Learn by Real email sequences and funnels",
+    "focusOnTrade": "IT Focused",
+    "focusedOn":"Drive opens, clicks, and sales",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Practice with live-style marketing scenarios",
+    "learningOutcomes": [
+      "Email marketing strategy & funnel creation",
+      "Email marketing strategy & funnel creation",
+      "High-converting copywriting for emails",
+      "Automation sequences & workflows",
+      "Campaign optimization & A/B testing",
+      "Email analytics & performance tracking",
+      "Personalization & customer journey mapping",
+      "CRM & marketing tool integration",
+      "Portfolio-ready campaign project"
+    ],
+    "programBinits": [
+      "Hands-on projects to apply creativity in real-world scenarios.",
+      "Expert mentorship from experienced graphic designers and visual artists.",
+      "Portfolio development guidance to prepare for clients or employers.",
+      "Access to industry-standard software and tools for professional practice.",
+      "Insights into freelancing, branding, and design business fundamentals."
+    ]
+  },
+  {
+    "id": "welder",
+    "title": "Welder Course",
+    "description": [
+      "12-week professional hands-on training program.\nBuild skills in MIG, TIG & Stick welding techniques."
+    ],
+    "image": "/welder.png",
+     "courseDuration": "12-Weeks Program ",
+    "desc":"Learn by Real welding practice",
+    "training":"Hands-on Training",
+    "trainingDesc":"Learn by Real email sequences and funnels",
+    "focusOnTrade": "Industrial Focused",
+    "focusedOn":"Job-ready Industrial welding skills",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Balanced approach combining knowledge and application",
+    "learningOutcomes": [
+      "MIG, TIG & Stick welding techniques",
+      "Metal fabrication & blueprint reading",
+      "Welding safety & equipment handling",
+      "Joint types & welding positions",
+      "Quality control & troubleshooting skills",
+      "Industrial welding project experience"
+    ],
+    "whyChooseJKD": [
+      "At JKD Pakistan, we provide international-standard welding education aligned with global TVET (Technical and Vocational Education and Training) benchmarks.",
+      "Our training facilities feature modern equipment, expert instructors, and a practical, project-based approach — ensuring every learner graduates with the confidence and competence to excel in the welding industry, both locally and internationally."
+    ]
+  },
+  {
+    "id": "hvacr-technician",
+    "title": "HVACR Technician Course",
+    "description": [
+      "12-week professional hands-on training program.\n Build skills in heating, ventilation, air conditioning & refrigeration systems."
+    ],
+    "image": "/hvsar.png",
+     "courseDuration": "12-Weeks Program ",
+    "desc":"Learn by Real welding practice",
+    "training":"Hands-on Training",
+    "trainingDesc":"Learn by Practical system work",
+    "focusOnTrade": "Industrial Focused",
+    "focusedOn":"Job-ready HVACR installation & maintenance",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Balanced approach combining knowledge and application",
+    "learningOutcomes": [
+      "HVACR installation, maintenance & repair",
+      "System diagnostics & troubleshooting",
+      "Refrigeration cycles & thermal principles",
+      "Energy efficiency techniques",
+      "Safety protocols & refrigerant handling",
+      "Real-world HVACR project experience"
+    ],
+    "whyChooseJKD": [
+      "At JKD Pakistan, we deliver international-standard technical training aligned with TVET benchmarks. Our modern labs, industry-experienced instructors, and practical learning approach ensure students graduate with the confidence, competence, and credentials to excel in the global HVACR industry."
+    ]
+  },
+  {
+    "id": "lift-operator",
+    "title": "Lift Operator Course",
+    "description": [
+      "6–12 week professional hands-on training program.\nBuild skills in safe lift operation, inspection & maintenance."
+    ],
+    "image": "/liftOpe.png",
+     "courseDuration": "6-12 Week Program ",
+    "desc":"Adaptive curriculum designed for practical skill development.",
+    "training":"Hands-on Training",
+    "trainingDesc":"Learn by Practical lift operation practice",
+    "focusOnTrade": "Industrial Focused",
+    "focusedOn":"Job-ready Safety & operational standards",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Balanced approach combining knowledge and application",
+    "learningOutcomes": [
+      "Lift system operation & control panels",
+      "Safety standards & inspection procedures",
+      "Emergency response & fault reporting",
+      "Mechanical & electrical system basics",
+      "Passenger handling & communication skills",
+      "Real-world lift operation training"
+    ],
+    "whyChooseJKD": [
+      "At JKD Pakistan, we deliver international-standard technical training aligned with TVET benchmarks. Our state-of-the-art training labs, experienced instructors, and practical learning methodology ensure every student gains the skills, confidence, and credentials to succeed. We prepare our graduates to operate lifts safely, efficiently, and professionally — ready for opportunities both locally and abroad."
+    ]
+  },
+  {
+    "id": "table-tennis",
+    "title": "Table Tennis Traning Course",
+    "description": [
+      "3-Months sports training program.\n Develop table tennis skills, reflexes & competitive gameplay."
+    ],
+    "image": "/tableTannis.png",
+     "courseDuration": "3 Months",
+    "desc":"Comprehensive curriculum designed forStructured training",
+    "training":"Hands-on Training",
+    "trainingDesc":"Learn by Practice drills & matches",
+    "focusOnTrade": "Sports Focused",
+    "focusedOn":"Learn speed, control & reflexes",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Techniques with game understanding",
+    "learningOutcomes": [
+      "Grip styles, serving & stroke techniques",
+      "Footwork, positioning & table control",
+      "Game strategies & tactical awareness",
+      "Agility, reflexes & hand-eye coordination",
+      "Match experience through practice games",
+      "Tournament participation & performance growth"
+    ],
+    "whyChooseJKD": [
+      "At JKD Pakistan, we believe in developing both the skills and spirit of our students through sports and recreation. Our well-equipped sports facilities, qualified trainers, and interactive learning environment ensure that every participant enjoys the game while building confidence and physical fitness. Whether you are a beginner or an enthusiast, our Table Tennis Program helps you sharpen your skills, compete with passion, and celebrate success!."
+    ]
+  },
+  {
+    "id": "badminton-indoor",
+    "title": "Indoor Badminton Training Course",
+    "description": [
+      "3-Months sports training program.\n Develop badminton skills, agility & competitive mindset."
+    ],
+    "image": "/indoorbadminton.png",
+    "courseDuration": "3 Months",
+    "desc":"Comprehensive curriculum designed for Structured training",
+    "training":"Hands-on Training",
+    "trainingDesc":"Learn by Practice drills & matches",
+    "focusOnTrade": "Sports Focused",
+    "focusedOn":"Learn technique, speed & control",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Techniques with game understanding",
+    "learningOutcomes": [
+      "Shot techniques & shuttle control",
+      "Footwork, positioning & court movement",
+      "Game strategies & match play skills",
+      "Strength, speed & coordination",
+      "Teamwork, focus & confidence",
+      "Tournament participation & performance growth"
+    ],
+    "whyChooseJKD": [
+      "At JKD Pakistan, we provide international-standard sports training with a focus on fitness, discipline, and enjoyment. Our indoor badminton facilities, experienced instructors, and structured learning environment allow students to train effectively, compete confidently, and grow as athletes. Whether for recreation or competition, our Indoor Badminton Program helps every player unlock their full potential on the court."
+    ]
+  },
+  {
+    "id": "badminton-outdoor",
+    "hours": 132,
+    "lectures": 36,
+    "title": "Outdoor Badminton Training Course",
+    "description": [
+      "3-Months sports training program.\n Develop badminton skills, agility & competitive mindset."
+    ],
+    "image": "/outdoorBadminton.png",
+      "courseDuration": "3 Months",
+    "desc":"Comprehensive curriculum designed for Structured training",
+    "training":"Hands-on Training",
+    "trainingDesc":"Learn by Practice drills & matches",
+    "focusOnTrade": "Sports Focused",
+    "focusedOn":"Learn technique, agility & control",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Techniques with game understanding",
+    "learningOutcomes": [
+      "Racket handling & shot control techniques",
+      "Footwork, positioning & outdoor gameplay",
+      "Game strategies & match performance",
+      "Stamina, coordination & adaptability",
+      "Teamwork, communication & fair play",
+      "Tournament participation & performance growth"
+    ],
+    "whyChooseJKD": [
+      "At JKD Pakistan, we combine fun, fitness, and skill development through well-organized outdoor sports programs. Our qualified coaches, open-air courts, and interactive training sessions ensure that every student enjoys the sport while building strength, confidence, and a healthy competitive spirit. The Outdoor Badminton Program helps players grow both physically and mentally — preparing them for active participation in sports and teamwork in everyday life."
+    ]
+  },
+  {
+    "id": "futsal",
+    "title": "Futsal Traning \n Course",
+    "description": [
+      "3-Months sports training program. \n Develop futsal skills, fitness & teamwork."
+    ],
+    "image": "/futsal.png",
+    "courseDuration": "3 Months",
+    "desc":"Comprehensive curriculum designed for Structured training",
+    "training":"Hands-on Training",
+    "trainingDesc":"Learn by Practice drills & matches",
+    "focusOnTrade": "Sports Focused",
+    "focusedOn":"Learn Futsal skills & maintain fitness",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Techniques with game understanding",
+    "learningOutcomes": [
+      "Ball control, passing, dribbling & shooting",
+      "Defensive techniques & game strategies",
+      "Teamwork, communication & coordination",
+      "Agility, stamina & decision-making skills",
+      "Match experience through practice games",
+      "Tournament participation & performance improvement"
+    ],
+    "whyChooseJKD": [
+      "At JKD Pakistan, we aim to build confidence, fitness, and teamwork through our structured sports programs. Our qualified coaches, modern futsal facilities, and interactive training sessions create a fun yet professional learning environment. Whether you’re new to football or aiming to refine your skills, the Futsal Training Program at JKD Pakistan helps you play smart, stay fit, and compete with passion."
+    ]
+  },
+  {
+    "id": "cricket",
+    "title": "Cricket Traning \n  Course",
+    "description": [
+      "3-Months sports training program. \n Develop cricket skills, fitness & game strategy."
+    ],
+    "image": "/cricket.png",
+    "courseDuration": "3 Months",
+    "desc":"Comprehensive curriculum designed for Structured training",
+    "training":"Hands-on Training",
+    "trainingDesc":"Learn by Practice sessions & matches",
+    "focusOnTrade": "Sports Focused",
+    "focusedOn":"Learn technique, fitness & strategy",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Techniques with game understanding",
+    "learningOutcomes": [
+      "Batting, bowling & fielding techniques",
+      "Game rules, roles & strategies",
+      "Fitness, stamina & coordination",
+      "Teamwork, communication & leadership",
+      "Match experience through practice games",
+      "Performance improvement through competitions"
+    ],
+    "whyChooseJKD": [
+      "At JKD Pakistan, we are committed to promoting sports excellence through structured and enjoyable training programs. Our qualified cricket coaches, modern practice facilities, and interactive learning environment ensure that every student receives professional-level guidance and motivation. The Cricket Training Program not only helps players refine their technical abilities but also instills confidence, teamwork, and a winning attitude — preparing them for both local and national-level competitions."
+    ]
+  },
+  {
+    "id": "fitness-club",
+    "title": "Gym & Fitness Training Program",
+    "description": [
+      "3-Months sports training program.\n Build strength, stamina & a healthy lifestyle."
+    ],
+    "image": "/Gym.png",
+     "courseDuration": "3 Months",
+    "desc":"Comprehensive curriculum designed for Structured training",
+    "training":"Hands-on Training",
+    "trainingDesc":"Learn by daily workouts & routines",
+    "focusOnTrade": "Fitness Focused",
+    "focusedOn":"Practice strength, stamina & endurance",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Training with guidance",
+    "learningOutcomes": [
+      "Proper use of gym equipment",
+      "Strength, endurance & flexibility training",
+      "Cardio workouts & fitness routines",
+      "Posture, breathing & injury prevention",
+      "Discipline, motivation & healthy habits",
+      "Real-world fitness training experience"
+    ],
+    "whyChooseJKD": [
+      "At JKD Pakistan, we believe that physical fitness is the foundation of a successful and confident life. Our modern gym facilities, certified trainers, and supportive training environment provide the ideal platform for personal growth and health improvement. Whether you are a beginner or an experienced fitness enthusiast, our Gym & Fitness Training Program helps you build strength, boost energy, and stay fit — both physically and mentally."
+    ]
+  },
+  {
+    "id": "personal-training",
+    "title": "Personal Training \n Program",
+    "description": [
+      "3-Months Professional Fitness Training Program. \nBecome a certified personal trainer with practical skills in fitness.."
+    ],
+    "image": "/perssonalTraining.png",
+     "courseDuration": "3 Months",
+    "desc":"Comprehensive curriculum designed for Structured training",
+    "training":"Hands-on Training",
+    "trainingDesc":"Learn by Gym-Based Practical Training Sessions",
+    "focusOnTrade": "Fitness Focused",
+    "focusedOn":"Learn Nutrition Basics for Fitness Goals",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Training with guidance",
+    "learningOutcomes": [
+      "Basics of human anatomy and muscle groups",
+      "Proper exercise form and technique correction",
+      "Strength training & muscle building methods",
+      "Creating simple personalized workout plans for clients",
+      "Fitness assessment and progress tracking  techniques",
+      "Injury prevention and safe gym training practices"
+    ],
+    "whyChooseJKD": [
+      "At JKD Pakistan, we believe that physical fitness is the foundation of a successful and confident life. Our modern gym facilities, certified trainers, and supportive training environment provide the ideal platform for personal growth and health improvement. Whether you are a beginner or an experienced fitness enthusiast, our Gym & Fitness Training Program helps you build strength, boost energy, and stay fit — both physically and mentally."
+    ]
+  },
+  {
+    "id": "front-office-manager",
+    "title": "Front Office Manager  \n Course",
+    "description": [
+      "12-week professional hands-on training program.\nBuild skills in hospitality & front office management."
+    ],
+    "image": "/frontOffice.png",
+    "courseDuration": "12-Week Program",
+    "desc": "Comprehensive curriculum designed for professional development",
+    "training": "Hands-on Training",
+    "trainingDesc": "Learn by Real scenarios & practice",
+    "focusOnTrade": "Industrial Focused",
+    "focusedOn": "Job-ready Hospitality & management skills",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Balanced approach combining knowledge and application",
+    "learningOutcomes": [
+      "Guest service management & communication",
+      "Reservation systems & front office operations",
+      "Leadership & problem-solving skills",
+      "Customer relationship management (CRM) tools",
+      "Handling real-world front office scenarios",
+      "Practical experience in hospitality operations"
+    ],
+    "whyChooseJKD": [
+      "At JKD Pakistan, we deliver industry-aligned hospitality training that meets international TVET standards. Our modern training labs, experienced instructors, and practical learning approach ensure every student is ready for success in the hospitality field. By completing the Front Office Manager Course, learners gain the competence, confidence, and credentials to build a rewarding career in the global hotel and tourism industry."
+    ]
+  },
+  {
+    "id": "professional-cook-course",
+    "title": "Professional Cook \n Course",
+    "description": [
+      "12-week professional hands-on training program.\nBuild skills in culinary arts & professional kitchen operations."
+    ],
+    "image": "/professionalCook.png",
+    "courseDuration": "12-Week Program",
+    "desc": "Comprehensive curriculum designed for professional development",
+    "training": "Hands-on Training",
+    "trainingDesc": "Learn by Live kitchen practice",
+    "focusOnTrade": "Industrial Focused",
+    "focusedOn": "Job-ready Culinary & hospitality skills",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Balanced approach combining knowledge and application",
+    "learningOutcomes": [
+      "Over 40 lectures and 60+ hours of hands-on culinary training",
+      "Live cooking labs with real-time feedback from expert chefs",
+      "Master knife handling, cooking methods, and food presentation",
+      "Learn traditional and modern cuisines with professional guidance",
+      "Understand food safety, nutrition, and kitchen management",
+      "Earn a professional certification to launch your culinary career"
+    ],
+    "whyChooseJKD": [
+      "At JKD Pakistan, we provide international-standard culinary training aligned with TVET benchmarks. Our state-of-the-art training kitchens, industry-experienced instructors, and practical learning approach ensure that every student develops the skill, creativity, and confidence to succeed in the culinary world.",
+      "Whether you dream of working in five-star hotels, running your own restaurant, or becoming a professional chef, the Professional Cook Course at JKD Pakistan is your gateway to a rewarding and flavorful career."
+    ]
+  },
+  {
+    "id": "fast-food",
+    "title": "Fast Food Expert \n Course",
+    "description": [
+      "12-week professional hands-on training program.\nBuild skills in fast food operations, management & business."
+    ],
+    "image": "/fastFood.png",
+     "courseDuration": "12-Week Program",
+    "desc": "Comprehensive curriculum designed for professional development",
+    "training": "Hands-on Training",
+    "trainingDesc": "Learn by Live kitchen & Simulation",
+    "focusOnTrade": "Industrial Focused",
+    "focusedOn": "Job-ready Fast food operations & business skills",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Balanced approach combining knowledge and application",
+    "learningOutcomes": [
+      " Over 40 lectures and 60+ hours of hands-on learning",
+      " Practical training through live projects and case studies",
+      "Learn menu design, operations, and customer service strategies",
+      "Develop expertise in cost management and kitchen efficiency",
+      "Understand fast food branding, marketing, and team management",
+      "Earn a recognized certification for professional advancement"
+    ],
+    "whyChooseJKD": [
+      "AAt JKD Pakistan, we provide industry-relevant vocational training aligned with international TVET standards. Our modern kitchen facilities, experienced culinary instructors, and practical learning approach ensure students gain both confidence and competence to excel in the fast food industry.",
+      "Whether your goal is to work in established fast food brands or launch your own quick-service restaurant, the Fast Food Expert Course at JKD Pakistan gives you the essential skills, knowledge, and practical experience to succeed in today’s fast-moving food business."
+    ]
+  },
+  {
+    "id": "house-keeping",
+    "title": "House Keeping \n Course",
+    "description": [
+      "12-week professional hands-on training program.\nBuild skills in professional housekeeping, hygiene & facility management."
+    ],
+    "image": "/houseKeeping.png",
+    "courseDuration": "12-Week Program",
+    "desc": "Comprehensive curriculum designed for professional development",
+    "training": "Hands-on Training",
+    "trainingDesc": "Learn by Practical cleaning & management skills",
+    "focusOnTrade": "Industrial Focused",
+    "focusedOn": "Learn by Practical cleaning & management skills",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Balanced approach combining knowledge and application",
+    "learningOutcomes": [
+      "Over 40 lectures and 60 hours of content!",
+      "LIVE PROJECTs and hands-on training included.",
+      "Gain expertise in modern housekeeping techniques and management from experienced professionals"
+    ]
+  },
+  {
+    "id": "tour-operator",
+    "title": "Tour Operator \n Course",
+    "description": [
+      "12-week professional hands-on training program.\nBuild skills in tour planning, travel management & customer service."
+    ],
+    "image": "/tourOperator.png",
+    "courseDuration": "12-Week Program",
+    "desc": "Comprehensive curriculum designed for professional development",
+    "training": "Hands-on Training",
+    "trainingDesc": "Learn by Practical tour planning & management",
+    "focusOnTrade": "Industrial Focused",
+    "focusedOn": "Job-ready Travel & tourism operations",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Balanced approach combining knowledge and application",
+    "learningOutcomes": [
+      " Over 30 lectures and 50+ hours of interactive training",
+      "Practical experience in tour planning and itinerary design",
+      "Learn destination knowledge, booking systems, and customer service skills",
+      "Develop marketing, conflict resolution, and communication expertise",
+      "Understand travel regulations, supplier coordination, and digital tools",
+      "Earn a recognized certification for a professional career in tourism"
+    ],
+    "whyChooseJKD": [
+      "At JKD Pakistan, we offer international-standard tourism and hospitality training aligned with TVET benchmarks. Our experienced instructors, modern training methods, and hands-on learning approach ensure students gain the knowledge, confidence, and competence to excel in the global travel industry.",
+      "Whether your goal is to work with a leading travel company or start your own tour business, the Tour Operator Course at JKD Pakistan provides the perfect foundation to turn your passion for travel into a rewarding career."
+    ]
+  },
+  {
+  "id": "domestic-skills",
+    "title": "Domestic Skilled Worker \n Course",
+    "description": [
+      "12-week practical training program.\nDevelop essential household management & professional domestic skills."
+    ],
+    "image": "/domesticSkill.png",
+     "courseDuration": "12-Week Program",
+    "desc": "Comprehensive curriculum designed for professional development",
+    "training": "Hands-on Training",
+    "trainingDesc": "Learn by Real life Scenarios ",
+    "focusOnTrade": "Industrial Focused",
+    "focusedOn": "Domestic & household services",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Balanced approach combining knowledge and application",
+    "learningOutcomes": [
+      " Over 30 lectures and 50+ hours of interactive training",
+      "Practical experience in tour planning and itinerary design",
+      "Learn destination knowledge, booking systems, and customer service skills",
+      "Develop marketing, conflict resolution, and communication expertise",
+      "Understand travel regulations, supplier coordination, and digital tools",
+      "Earn a recognized certification for a professional career in tourism"
+    ],
+    "whyChooseJKD": [
+      "At JKD Pakistan, we offer international-standard tourism and hospitality training aligned with TVET benchmarks. Our experienced instructors, modern training methods, and hands-on learning approach ensure students gain the knowledge, confidence, and competence to excel in the global travel industry.",
+      "Whether your goal is to work with a leading travel company or start your own tour business, the Tour Operator Course at JKD Pakistan provides the perfect foundation to turn your passion for travel into a rewarding career."
+    ]
+  },
+  {
+    "id": "plumber-and-pipe-fabricator",
+    "title": "Plumber & Pipe Fabricator Course",
+    "description": [
+      "12-week professional hands-on training program.\nMaster the skills. Build your career."
+    ],
+    "image": "/plumber.png",
+    "courseDuration": "12-Week Program",
+    "desc": "Comprehensive curriculum designed for professional development",
+    "training": "Hands-on Training",
+    "trainingDesc": "Learn by doing work with real tools and equipment",
+    "focusOnTrade": "Industrial Focused",
+    "focusedOn": "Skills aligned with current market demands",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Balanced approach combining knowledge and application",
+    "learningOutcomes": [
+      " Master fundamental plumbing and pipe fabrication techniques, including cutting, threading, and joining",
+      "Interpret technical blueprints and schematics for precise installations",
+      "Fabricate and install custom piping systems following industry standards",
+      "Develop proficiency in welding, pressure testing, and CNC-based fabrication",
+      "Learn to design and install plumbing systems for residential, commercial, and industrial projects",
+      "Gain hands-on experience through a final real-world plumbing and fabrication project"
+    ],
+    "whyChooseJKD": [
+      "At JKD Pakistan, we deliver international-standard technical training aligned with TVET benchmarks, ensuring every graduate is equipped with globally recognized skills. Our modern plumbing workshops, experienced instructors, and project-based learning environment provide students with the confidence and competence to work on real construction and industrial projects.",
+      "By completing the Plumber & Pipe Fabricator Course, students gain the professional skills needed to build rewarding careers in construction, plumbing services, pipe fabrication workshops, and MEP contracting companies — both locally and internationally."
+    ]
+  },
+  {
+    "id": "tile-fixer",
+    "title": "Tile Fixer Course",
+    "description": [
+      "12-week practical construction training program.\n Master tile installation, finishing & surface alignment skills."
+    ],
+    "image": "/tileFixer.png",
+     "courseDuration": "12-Week Program",
+    "desc": "Comprehensive curriculum designed for professional development",
+    "training": "Hands-on Training",
+    "trainingDesc": "Learn by doing work with real tools and equipment",
+    "focusOnTrade": "Industrial Focused",
+    "focusedOn": "Skills aligned with Construction & finishing work",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Balanced approach from skills to execution",
+    "learningOutcomes": [
+      "Tile cutting, laying & alignment techniques",
+      "Surface preparation & leveling methods",
+      "Use of adhesives, grout & finishing tools",
+      "Installation of wall, floor & decorative tiles",
+      "Pattern design & spacing accuracy",
+      "Repair & maintenance of tile surfaces",
+      "Safety practices & tool handling",
+      "Real-world hands-on experience"
+    ],
+    "whyChooseJKD": [
+      "At JKD Pakistan, we deliver international-standard technical training aligned with TVET benchmarks, ensuring every graduate is equipped with globally recognized skills. Our modern plumbing workshops, experienced instructors, and project-based learning environment provide students with the confidence and competence to work on real construction and industrial projects.",
+      "By completing the Plumber & Pipe Fabricator Course, students gain the professional skills needed to build rewarding careers in construction, plumbing services, pipe fabrication workshops, and MEP contracting companies — both locally and internationally."
+    ]
+  },
+  {
+    "id": "plaster",
+    "title": "Plastering \n  Course",
+    "description": [
+      "12-week practical construction training program.\n Master tile installation, finishing & surface alignment skills."
+    ],
+    "image": "/plaster.png",
+     "courseDuration": "12-Week Program",
+    "desc": "Comprehensive curriculum designed for professional development",
+    "training": "Hands-on Training",
+    "trainingDesc": "Learn by doing work with real tools and equipment",
+    "focusOnTrade": "Industrial Focused",
+    "focusedOn": "Skills aligned with Construction & finishing work",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Balanced approach from skills to execution",
+    "learningOutcomes": [
+      "Surface preparation & plaster application       techniques",
+      "Mixing ratios for cement, sand & plaster",
+      "Wall & ceiling finishing methods",
+      "Crack repair & surface correction",
+      "Decorative & textured plaster techniques",
+      "Tool handling & safety practices",
+      "Quality control & finishing standards",
+      "Real-world practical experience"
+    ],
+    "whyChooseJKD": [
+      "At JKD Pakistan, we deliver international-standard technical training aligned with TVET benchmarks, ensuring every graduate is equipped with globally recognized skills. Our modern plumbing workshops, experienced instructors, and project-based learning environment provide students with the confidence and competence to work on real construction and industrial projects.",
+      "By completing the Plumber & Pipe Fabricator Course, students gain the professional skills needed to build rewarding careers in construction, plumbing services, pipe fabrication workshops, and MEP contracting companies — both locally and internationally."
+    ]
+  },
+  {
+    "id": "steel-fixer",
+    "title": "Steel Fixer \n  Course",
+    "description": [
+      " 12-week professional hands-on training program.\n Master steel reinforcement & structural assembly skills."
+    ],
+    "image": "/steel.png",
+     "courseDuration": "12-Week Program",
+    "desc": "Comprehensive skill development",
+    "training": "Hands-on Training",
+    "trainingDesc": "Practical workshops & real tools",
+    "focusOnTrade": "Industrial Focused",
+    "focusedOn": "Aligned with construction demands",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Balanced technical learning",
+    "learningOutcomes": [
+      " Master fundamental steel fixing techniques, including cutting, bending, and tying steel bars",
+      "Interpret construction drawings and bar bending schedules for accurate placement",
+      "Handle and install various reinforcement materials, including deformed bars and wire mesh",
+      "Integrate steel reinforcement with formwork for concrete structures",
+      "Understand structural load requirements and apply industry-standard fixing methods",
+      "Gain practical experience through real-world steel reinforcement installation projects"
+    ],
+    "whyChooseJKD": [
+      "At JKD Pakistan, we deliver international-standard vocational training aligned with TVET and industry benchmarks. Our modern construction labs, experienced instructors, and hands-on learning environment ensure that every student develops the technical precision and confidence needed to work safely and efficiently in the construction field.",
+      "By completing the Steel Fixer Course at JKD Pakistan, students gain the professional expertise to join construction teams, infrastructure projects, and steel fabrication companies — both locally and internationally — as skilled, certified steel fixers."
+    ]
+  },
+  {
+    "id": "mason",
+    "title": "Mason Course",
+    "description": [
+      "12-week professional hands-on training program.\nDevelop skills in masonry, construction & finishing."
+    ],
+    "image": "/mason.png",
+    "courseDuration": "12-Week Program",
+    "desc": "Comprehensive curriculum designed for rapid skill development",
+    "training": "Hands-on Training",
+    "trainingDesc": "Learn by doing work with real tools and equipment",
+    "focusOnTrade": "Industrial Focused",
+    "focusedOn": "Construction-ready skills",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Balanced approach combining knowledge and application",
+    "learningOutcomes": [
+      " Mastery of fundamental masonry techniques, including bricklaying, plastering, and tiling",
+      "Proficiency in interpreting blueprints and applying accurate measurements",
+      "Knowledge of cement mixing, mortar preparation, and structural alignment",
+      "Ability to construct and repair walls, floors, and decorative structures",
+      "Understanding of safety protocols and quality control standards",
+      "Hands-on experience through practical masonry projects"
+    ],
+    "whyChooseJKD": [
+      "At JKD Pakistan, we offer industry-aligned vocational training that meets international TVET standards, ensuring every graduate gains globally recognized skills. Our state-of-the-art construction labs, expert instructors, and practical learning environment help students build the confidence and technical ability to excel in real construction projects.",
+      "The Mason Course at JKD Pakistan prepares students to take on professional roles in building construction, maintenance, and renovation—both locally and internationally—providing a solid foundation for a stable and rewarding career in the construction industry."
+    ]
+  },
+  {
+    "id": "carpenter",
+    "title": "Carpenter (Wood) \nCourse",
+    "description": [
+      "12-week professional hands-on training program.\nBuild skills in woodworking, carpentry & furniture design."
+    ],
+    "image": "/carpenter.png",
+    "courseDuration": "12-Week Program",
+    "desc": "Comprehensive curriculum designed for rapid skill development",
+    "training": "Hands-on Training",
+    "trainingDesc": "Learn by doing work with real tools and equipment",
+    "focusOnTrade": "Industrial Focused",
+    "focusedOn": "Job-ready carpentry skills",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Balanced approach combining knowledge and application",
+    "learningOutcomes": [
+      "Over 40 lectures and 60+ hours of hands-on practical training",
+      " Mastery of essential woodworking techniques — cutting, shaping, joining, and finishing",
+      "Proficiency in reading blueprints and executing woodworking projects",
+      "Understanding of safe and efficient use of carpentry tools and materials",
+      "Ability to design and build furniture or structural wood pieces independently",
+      " Capstone project demonstrating complete project planning and execution"
+    ],
+    "whyChooseJKD": [
+      "At JKD Pakistan, we deliver international-standard vocational training aligned with TVET benchmarks, ensuring our students gain globally recognized skills. Our modern woodworking labs, experienced instructors, and practical learning environment provide students with the confidence, competence, and creativity to excel in the carpentry trade.",
+      "Whether you aim to become a professional carpenter, start your own woodworking business, or work in the construction industry, the Carpenter (Wood) Course at JKD Pakistan equips you with the craftsmanship and professional skills to build a successful career."
+    ]
+  },
+  {
+    "id": "building-electrician",
+    "title": "Building Electrician \n  Course",
+    "description": [
+      "12-Week Professional Electrical Training Program. \n Gain practical skills in building wiring & system troubleshooting for residential and commercial projects."
+    ],
+    "image": "/electrition.png",
+    "courseDuration": "12-Week Program",
+    "desc": "Comprehensive curriculum designed for rapid skill development",
+    "training": "Hands-on Training",
+    "trainingDesc": "Hands-On Electrical Installation Practice",
+    "focusOnTrade": "Industrial Focused",
+    "focusedOn": "Job-ready electrician \n skills",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Balanced approach combining knowledge and application",
+    "learningOutcomes": [
+      "Basics of mechanical systems and workshop operations",
+      "Residential and commercial building wiring  techniques",
+      "Installation of switches, sockets, and lighting systems",
+      "Electrical circuit protection & load management basics",
+      "Fault detection and troubleshooting skills",
+      "Safe use of electrical tools and equipment",
+      "Workshop safety and practical repair experience"
+    ],
+    "whyChooseJKD": [
+      "At JKD Pakistan, we provide international-standard technical and vocational education aligned with TVET benchmarks. Our modern electrical labs, experienced instructors, and hands-on learning environment ensure students graduate with the skills, confidence, and credentials needed to succeed in the electrical industry.",
+      "Whether your goal is to work as a certified electrician, join the construction and maintenance sector, or start your own electrical business, the Electrician Course at JKD Pakistan equips you with the technical expertise and practical experience to power your career forward."
+    ]
+  },
+  {
+    "id": "industrial-electrician",
+    "title": "Industrial Electrician \n  Course",
+    "description": [
+      "12-Week Professional Industrial Electrical Training Program. \n Build advanced skills in industrial wiring & electrical maintenance for factories and industrial environments."
+    ],
+    "image": "/indusElectrician.png",
+    "courseDuration": "12-Week Program",
+    "desc": "Comprehensive curriculum designed for rapid skill development",
+    "training": "Hands-on Training",
+    "trainingDesc": "Hands-On Electrical Installation Practice",
+    "focusOnTrade": "Industrial Focused",
+    "focusedOn": "Job-ready electrical \n skills",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Balanced approach combining knowledge and application",
+    "learningOutcomes": [
+      "Fundamentals of industrial electrical systems and   power distribution",
+      "Three-phase wiring and industrial installation techniques",
+      "Motor control systems and automation basics",
+      "Control panel wiring and circuit operation",
+      "Fault detection and troubleshooting in machinery",
+      "Industrial safety standards and protection systems",
+      "Practical experience with real industrial electrical setups"
+    ],
+    "whyChooseJKD": [
+      "At JKD Pakistan, we provide international-standard technical and vocational education aligned with TVET benchmarks. Our modern electrical labs, experienced instructors, and hands-on learning environment ensure students graduate with the skills, confidence, and credentials needed to succeed in the electrical industry.",
+      "Whether your goal is to work as a certified electrician, join the construction and maintenance sector, or start your own electrical business, the Electrician Course at JKD Pakistan equips you with the technical expertise and practical experience to power your career forward."
+    ]
+  },
+  {
+    "id": "auto-Mechanic",
+    "title": "Auto Mechanic \n  Course",
+    "description": [
+      "12-Week Professional Automotive Training Program. \n Master essential skills in car repair, engine diagnostics, and vehicle maintenance for workshop."
+    ],
+    "image": "/autoMechanic.png",
+    "courseDuration": "12-Week Program",
+    "desc": "Adaptive curriculum designed for practical skill development.",
+    "training": "Hands-on Training",
+    "trainingDesc": "Workshop-Based Practical Learning",
+    "focusOnTrade": "Industrial Focused",
+    "focusedOn": "Modern Vehicle Systems Understanding",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Balanced approach combining knowledge and application",
+    "learningOutcomes": [
+      "Basics of automobile systems and engine components",
+      "Engine repair, servicing, and maintenance techniques",
+      "Vehicle electrical system fundamentals",
+      "Brake, suspension, and steering system basics",
+      "Fault detection and troubleshooting methods",
+      "Use of basic diagnostic tools and equipment",
+      "Workshop safety and practical repair skills"
+    ],
+    "whyChooseJKD": [
+      "At JKD Pakistan, we deliver industry-standard technical training aligned with TVET benchmarks and global security system standards. Our modern training labs, experienced instructors, and practical learning environment ensure students graduate with the confidence and competence to excel in the security technology field.",
+      "The CCTV Technician Course at JKD Pakistan prepares learners to take on professional roles in CCTV installation, maintenance, and surveillance system design, helping them build a rewarding career in today’s fast-growing electronic security industry."
+    ]
+  },
+  {
+    "id": "mechanic",
+    "title": "Mechanic Course ",
+    "description": [
+      " 12-Week Professional Mechanical Skills Program. Develop practical skills in mechanical repair, maintenance, and troubleshooting for workshop"
+    ],
+    "image": "/autoMechanic.png",
+     "courseDuration": "12-Week Program",
+    "desc": "Adaptive curriculum designed for practical skill development.",
+    "training": "Hands-on Training",
+    "trainingDesc": "Workshop-Based Practical Learning",
+    "focusOnTrade": "Industrial Focused",
+    "focusedOn": "Workshop-Based Practical Learning",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Balanced approach combining knowledge and application",
+    "learningOutcomes": [
+      "Basics of mechanical systems and workshop operations",
+      "Proper use of hand tools and mechanical equipment",
+      "Machine repair and maintenance techniques",
+      "Fault identification and troubleshooting skills",
+      "Mechanical fitting and assembly basics",
+      "Preventive maintenance procedures",
+      "Workshop safety and practical repair experience"
+    ],
+    "whyChooseJKD": [
+      "At JKD Pakistan, we deliver international-standard technical training aligned with TVET benchmarks, ensuring students gain globally recognized, job-ready skills. Our modern fiber optics labs, experienced industry instructors, and project-based learning approach prepare students for both local and international employment opportunities.",
+      "The Fiber Optics Technician Course at JKD Pakistan provides the perfect pathway to a rewarding career in telecommunications, data networking, and high-speed internet infrastructure, empowering learners with the expertise to meet the demands of today’s digital world."
+    ]
+  },
+  {
+    "id": "solar-system-technician",
+    "title": "Solar System \n Technician Course ",
+    "description": [
+      " 12-week renewable energy training program. \n Install, maintain & troubleshoot solar power systems."
+    ],
+    "image": "/solar.png",
+     "courseDuration": "12-Week Program",
+    "desc": "Comprehensive curriculum designed for rapid skill development",
+    "training": "Hands-on Training",
+    "trainingDesc": "Learn by doing work with real tools and workshops",
+    "focusOnTrade": "Industrial Focused",
+    "focusedOn": "Skills aligned with Solar & renewable energy",
+    "learningOutcomesTitle": "Practical + Theory",
+    "learningOutcomesDesc": "Balanced approach from System to execution",
+    "learningOutcomes": [
+      "Solar panel installation & system setup",
+      "Understanding PV systems & components",
+      "Electrical wiring & inverter connections",
+      "System sizing & load calculation basics",
+      "Battery storage & energy management",
+      "Troubleshooting & maintenance techniques",
+      "Safety protocols & tool handling",
+      "Real-world hands-on experience"
+    ],
+    "whyChooseJKD": [
+      "At JKD Pakistan, we deliver international-standard technical training aligned with TVET benchmarks, ensuring students gain globally recognized, job-ready skills. Our modern fiber optics labs, experienced industry instructors, and project-based learning approach prepare students for both local and international employment opportunities.",
+      "The Fiber Optics Technician Course at JKD Pakistan provides the perfect pathway to a rewarding career in telecommunications, data networking, and high-speed internet infrastructure, empowering learners with the expertise to meet the demands of today’s digital world."
+    ]
+  }
+]
