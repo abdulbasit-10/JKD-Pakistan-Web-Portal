@@ -49,16 +49,13 @@ export async function PUT(request) {
       return NextResponse.json({ error: "New password cannot be the same as current password" }, { status: 400 });
     }
 
-    const hashedPassword = await bcrypt.hash(newPassword, 10);
-    user.password = hashedPassword;
+    user.password = await bcrypt.hash(newPassword, 10);
     await user.save();
 
     return NextResponse.json({ message: "Password updated successfully" }, { status: 200 });
   } catch (error) {
     console.error("PUT /api/users/change-password error:", error);
-    return NextResponse.json(
-      { error: "Server error", detail: error.message },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: "Server error" }, { status: 500 }); // detail hataya
   }
 }
+

@@ -11,7 +11,7 @@ import Testimonel from "@/component/Testimonel";
 import JKD from "../component/JKD";
 import KickstartCarrer from "@/component/KickstartCarrer";
 import LoadingScreen from "@/component/LoadingScreen";
-import NewsPopup from "@/component/NewsPopup";
+// import NewsPopup from "@/component/NewsPopup";
 import Link from "next/link";
 
 export default function Home() {
@@ -35,7 +35,7 @@ export default function Home() {
   return (
     < div className="min-h-screen w-full flex flex-col overflow-x-hidden">
       <Header />
-      <NewsPopup isOpen={showNewsPopup} onClose={() => setShowNewsPopup(false)} />
+      {/* <NewsPopup isOpen={showNewsPopup} onClose={() => setShowNewsPopup(false)} /> */}
       {/* {
         job &&
         <div className="fixed inset-0 bg-black/40 flex justify-center items-center z-50">

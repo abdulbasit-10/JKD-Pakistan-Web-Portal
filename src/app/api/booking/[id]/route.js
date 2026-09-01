@@ -2,20 +2,22 @@ import { NextResponse } from "next/server";
 import { connectDB } from "@/lib/dbConnect";
 import Booking from "@/models/bookModel";
 
+const ALLOWED_STATUSES = ["Pending", "Confirmed", "Approved", "Rejected"];
 
 export async function PUT(request, { params }) {
   try {
     await connectDB();
 
     const { id } = await params;
-    console.log("Updating booking with id:", id);
     const { status } = await request.json();
 
     if (!status) {
-      return NextResponse.json(
-        { error: "Status field is required" },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: "Status field is required" }, { status: 400 });
+    }
+
+    // ✅ Sirf allowed values accept honi chahiye
+    if (!ALLOWED_STATUSES.includes(status)) {
+      return NextResponse.json({ error: "Invalid status value" }, { status: 400 });
     }
 
     const updatedBooking = await Booking.findByIdAndUpdate(
@@ -25,28 +27,19 @@ export async function PUT(request, { params }) {
     );
 
     if (!updatedBooking) {
-      return NextResponse.json(
-        { error: "Application not found" },
-        { status: 404 }
-      );
+      return NextResponse.json({ error: "Booking not found" }, { status: 404 });
     }
 
     return NextResponse.json(
-      {
-        message: "Status updated successfully",
-        Booking: updatedBooking,
-      },
+      { message: "Status updated successfully", Booking: updatedBooking },
       { status: 200 }
     );
   } catch (err) {
     console.error("PUT /api/booking/[id] error:", err);
-    return NextResponse.json(
-      { error: "Internal server error", detail: err.message },
-      { status: 500 }
-    );
+    // ⚠️ err.message user ko expose nahi karna chahiye production mein
+    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }
-
 
 export async function DELETE(request, { params }) {
   try {
@@ -57,24 +50,18 @@ export async function DELETE(request, { params }) {
     const deletedBooking = await Booking.findByIdAndDelete(id);
 
     if (!deletedBooking) {
-      return NextResponse.json(
-        { error: "Application not found" },
-        { status: 404 }
-      );
+      return NextResponse.json({ error: "Booking not found" }, { status: 404 });
     }
 
     return NextResponse.json(
       {
-        message: "Application deleted successfully",
-        application: deletedApplication,
+        message: "Booking deleted successfully",
+        booking: deletedBooking, // ✅ fixed: pehle 'deletedApplication' tha jo exist hi nahi karta tha
       },
       { status: 200 }
     );
   } catch (err) {
-    console.error("DELETE /api/apply/[id] error:", err);
-    return NextResponse.json(
-      { error: "Internal server error", detail: err.message },
-      { status: 500 }
-    );
+    console.error("DELETE /api/booking/[id] error:", err);
+    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }

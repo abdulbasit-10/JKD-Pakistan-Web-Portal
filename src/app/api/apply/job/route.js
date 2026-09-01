@@ -2,7 +2,9 @@ import { NextResponse } from "next/server";
 import { connectDB } from "@/lib/dbConnect";
 import Job from "@/models/jobModel";
 import { uploadImageToCloudinary } from "@/lib/cloudinary";
-import jwt from "jsonwebtoken";
+
+const ALLOWED_TYPES = ["image/jpeg", "image/png", "image/webp", "application/pdf"];
+const MAX_SIZE_BYTES = 5 * 1024 * 1024; // 5MB
 
 export async function POST(request) {
   try {
@@ -25,38 +27,42 @@ export async function POST(request) {
       paymentMethod,
     } = Object.fromEntries(formData);
 
-    // Get file uploads
     const cnicPictureFile = formData.get("cnicPicture");
     const latestQualificationPictureFile = formData.get("latestQualificationPicture");
     const passportSizePhotographFile = formData.get("passportSizePhotograph");
     const paidChallanFileFile = formData.get("paidChallanFile");
     const resumeFile = formData.get("resumeUrl");
 
-    // Validation - all required fields
     if (
-      !fullName ||
-      !fatherName ||
-      !email ||
-      !gender ||
-      !whatsappNumber ||
-      !contactNumber ||
-      !cnic ||
-      !fatherCnic ||
-      !dateOfBirth ||
-      !province ||
-      !district ||
-      !tehsil ||
-      !appliedPosition ||
-      !paymentMethod ||
-      !resumeFile
+      !fullName || !fatherName || !email || !gender || !whatsappNumber ||
+      !contactNumber || !cnic || !fatherCnic || !dateOfBirth || !province ||
+      !district || !tehsil || !appliedPosition || !paymentMethod || !resumeFile
     ) {
-      return NextResponse.json(
-        { error: "All required fields must be filled" },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: "All required fields must be filled" }, { status: 400 });
     }
 
-    // Upload files to Cloudinary
+    // ✅ Har uploaded file ka type/size validate karo
+    const filesToCheck = [
+      cnicPictureFile, latestQualificationPictureFile,
+      passportSizePhotographFile, paidChallanFileFile, resumeFile,
+    ];
+    for (const file of filesToCheck) {
+      if (file && typeof file !== "string") {
+        if (!ALLOWED_TYPES.includes(file.type)) {
+          return NextResponse.json(
+            { error: "Only JPG, PNG, WEBP or PDF files are allowed" },
+            { status: 400 }
+          );
+        }
+        if (file.size > MAX_SIZE_BYTES) {
+          return NextResponse.json(
+            { error: "Each file must be under 5MB" },
+            { status: 400 }
+          );
+        }
+      }
+    }
+
     const uploadFile = async (file) => {
       if (!file || typeof file === "string") return null;
       const arrayBuffer = await file.arrayBuffer();
@@ -73,22 +79,10 @@ export async function POST(request) {
     const passportSizePhotographUrl = await uploadFile(passportSizePhotographFile);
     const paidChallanFileUrl = await uploadFile(paidChallanFileFile);
 
-    // Save to MongoDB
     const newApplication = new Job({
-      fullName,
-      fatherName,
-      email,
-      gender,
-      whatsappNumber,
-      contactNumber,
-      cnic,
-      fatherCnic,
-      dateOfBirth: new Date(dateOfBirth),
-      province,
-      district,
-      tehsil,
-      appliedPosition,
-      paymentMethod,
+      fullName, fatherName, email, gender, whatsappNumber, contactNumber,
+      cnic, fatherCnic, dateOfBirth: new Date(dateOfBirth),
+      province, district, tehsil, appliedPosition, paymentMethod,
       cnicPicture: cnicPictureUrl,
       latestQualificationPicture: latestQualificationPictureUrl,
       passportSizePhotograph: passportSizePhotographUrl,
@@ -104,46 +98,27 @@ export async function POST(request) {
     );
   } catch (err) {
     console.error("POST /api/apply/job error:", err);
-    
+
     if (err.code === 11000) {
       const field = Object.keys(err.keyPattern)[0];
-      let userMessage = "An application with this information already exists.";
-      
-      if (field === "email") {
-        userMessage = "An application with this email has already been submitted. Please use a different email address.";
-      }
-      
-      return NextResponse.json(
-        { error: userMessage },
-        { status: 409 }
-      );
+      const userMessage = field === "email"
+        ? "An application with this email has already been submitted."
+        : "An application with this information already exists.";
+      return NextResponse.json({ error: userMessage }, { status: 409 });
     }
-    
-    return NextResponse.json(
-      { error: "Server error", detail: err.message },
-      { status: 500 }
-    );
+
+    // ⚠️ err.message hataya — internal details expose nahi karni
+    return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
 }
 
-
 export async function GET(request) {
   try {
-    await connectDB(); 
-
+    await connectDB();
     const applications = await Job.find();
-
-    return NextResponse.json(
-      {
-        data: applications,
-      },
-      { status: 200 }
-    );
+    return NextResponse.json({ data: applications }, { status: 200 });
   } catch (err) {
     console.error("GET /api/apply/job error:", err);
-    return NextResponse.json(
-      { error: "Server error", detail: err.message },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
 }

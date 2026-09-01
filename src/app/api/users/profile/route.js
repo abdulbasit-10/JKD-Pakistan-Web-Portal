@@ -33,38 +33,20 @@ export async function PUT(request) {
     const email = body?.email?.trim() || currentUser.email;
     const phone = body?.phone?.trim() ?? currentUser.phone ?? "";
 
-    const duplicateQuery = {
-      _id: { $ne: decoded.sub },
-      $or: [],
-    };
-
-    if (email !== currentUser.email) {
-      duplicateQuery.$or.push({ email });
-    }
-
-    if (userName !== currentUser.userName) {
-      duplicateQuery.$or.push({ userName });
-    }
+    const duplicateQuery = { _id: { $ne: decoded.sub }, $or: [] };
+    if (email !== currentUser.email) duplicateQuery.$or.push({ email });
+    if (userName !== currentUser.userName) duplicateQuery.$or.push({ userName });
 
     if (duplicateQuery.$or.length > 0) {
       const duplicateUser = await User.findOne(duplicateQuery);
-
       if (duplicateUser) {
-        return NextResponse.json(
-          { error: "Username or email already exists" },
-          { status: 409 }
-        );
+        return NextResponse.json({ error: "Username or email already exists" }, { status: 409 });
       }
     }
 
     const updatedUser = await User.findByIdAndUpdate(
       decoded.sub,
-      {
-        fullName,
-        userName,
-        email,
-        phone,
-      },
+      { fullName, userName, email, phone },
       { new: true }
     ).select("_id email userName fullName phone role createdAt profileImage");
 
@@ -93,9 +75,7 @@ export async function PUT(request) {
     );
   } catch (error) {
     console.error("PUT /api/users/profile error:", error);
-    return NextResponse.json(
-      { error: "Server error", detail: error.message },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: "Server error" }, { status: 500 }); // detail hataya
   }
 }
+

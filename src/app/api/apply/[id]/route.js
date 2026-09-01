@@ -2,12 +2,14 @@ import { NextResponse } from "next/server";
 import { connectDB } from "@/lib/dbConnect";
 import Apply from "@/models/applyModel";
 
+const ALLOWED_STATUSES = ["Pending", "Approved", "Rejected"];
+
 export async function PUT(request, { params }) {
   try {
     await connectDB();
 
-    const { id } = await params; // Get the application ID from URL
-    const { status } = await request.json(); // Get status from request body
+    const { id } = await params;
+    const { status } = await request.json();
 
     if (!status) {
       return NextResponse.json(
@@ -16,14 +18,19 @@ export async function PUT(request, { params }) {
       );
     }
 
-    // Find the application by ID and update the status
+    // ✅ Sirf allowed values accept honi chahiye — warna koi bhi random status set kar sakta hai
+    if (!ALLOWED_STATUSES.includes(status)) {
+      return NextResponse.json(
+        { error: "Invalid status value" },
+        { status: 400 }
+      );
+    }
+
     const updatedApplication = await Apply.findByIdAndUpdate(
       id,
       { status },
-      { new: true } // return the updated document
+      { new: true }
     );
-
-    console.log("Updated Application: ", updatedApplication);
 
     if (!updatedApplication) {
       return NextResponse.json(
@@ -41,8 +48,9 @@ export async function PUT(request, { params }) {
     );
   } catch (err) {
     console.error("PUT /api/apply/[id] error:", err);
+    // ⚠️ err.message hata diya — internal error details client ko show nahi karni chahiye
     return NextResponse.json(
-      { error: "Server error", detail: err.message },
+      { error: "Server error" },
       { status: 500 }
     );
   }
@@ -68,12 +76,12 @@ export async function DELETE(request, { params }) {
       },
       { status: 200 }
     );
-
   } catch (err) {
     console.error("DELETE /api/apply/[id] error:", err);
     return NextResponse.json(
-      { error: "Server error", detail: err.message },
+      { error: "Server error" },
       { status: 500 }
     );
   }
 }
+

@@ -2,7 +2,9 @@ import { NextResponse } from "next/server";
 import { connectDB } from "@/lib/dbConnect";
 import TourismApplication from "@/models/tourismApplicationModel";
 import { uploadImageToCloudinary } from "@/lib/cloudinary";
-import { ObjectId } from "mongodb";
+
+const ALLOWED_TYPES = ["image/jpeg", "image/png", "image/webp", "application/pdf"];
+const MAX_SIZE_BYTES = 5 * 1024 * 1024;
 
 export async function GET(request) {
   try {
@@ -11,10 +13,7 @@ export async function GET(request) {
     return NextResponse.json(applications, { status: 200 });
   } catch (error) {
     console.error("GET /api/apply/tourism error:", error);
-    return NextResponse.json(
-      { error: "Unable to fetch tourism applications.", detail: error.message },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: "Unable to fetch tourism applications." }, { status: 500 });
   }
 }
 
@@ -38,16 +37,8 @@ export async function POST(request) {
     const applicationDocument = formData.get("applicationDocument");
 
     if (
-      !packageId ||
-      !packageTitle ||
-      !name ||
-      !fatherName ||
-      !cnic ||
-      !phoneNumber ||
-      !email ||
-      !numberOfPersons ||
-      !preferredTravelDate ||
-      !applicationDocument
+      !packageId || !packageTitle || !name || !fatherName || !cnic ||
+      !phoneNumber || !email || !numberOfPersons || !preferredTravelDate || !applicationDocument
     ) {
       return NextResponse.json(
         { error: "All fields are required, including the uploaded document." },
@@ -55,11 +46,19 @@ export async function POST(request) {
       );
     }
 
-    if (!applicationDocument || typeof applicationDocument === "string") {
+    if (typeof applicationDocument === "string") {
+      return NextResponse.json({ error: "Please upload a valid document file." }, { status: 400 });
+    }
+
+    // ✅ File validation add ki
+    if (!ALLOWED_TYPES.includes(applicationDocument.type)) {
       return NextResponse.json(
-        { error: "Please upload a valid document file." },
+        { error: "Only JPG, PNG, WEBP or PDF files are allowed" },
         { status: 400 }
       );
+    }
+    if (applicationDocument.size > MAX_SIZE_BYTES) {
+      return NextResponse.json({ error: "Document must be under 5MB" }, { status: 400 });
     }
 
     const rawBuffer = await applicationDocument.arrayBuffer();
@@ -70,17 +69,8 @@ export async function POST(request) {
     const uploadResult = await uploadImageToCloudinary(dataUri);
 
     const newApplication = new TourismApplication({
-      packageId,
-      packageTitle,
-      packageLocation,
-      packageDuration,
-      packagePrice,
-      name,
-      fatherName,
-      cnic,
-      phoneNumber,
-      email,
-      numberOfPersons,
+      packageId, packageTitle, packageLocation, packageDuration, packagePrice,
+      name, fatherName, cnic, phoneNumber, email, numberOfPersons,
       preferredTravelDate: new Date(preferredTravelDate),
       applicationDocumentUrl: uploadResult.secure_url,
       documentMimeType: applicationDocument.type,
@@ -89,18 +79,11 @@ export async function POST(request) {
     await newApplication.save();
 
     return NextResponse.json(
-      {
-        message: "Tourism application submitted successfully.",
-        application: newApplication,
-      },
+      { message: "Tourism application submitted successfully.", application: newApplication },
       { status: 201 }
     );
   } catch (error) {
     console.error("POST /api/apply/tourism error:", error);
-    return NextResponse.json(
-      { error: "Unable to submit application.", detail: error.message },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: "Unable to submit application." }, { status: 500 }); // detail hataya
   }
 }
-

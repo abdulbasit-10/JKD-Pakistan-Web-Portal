@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-// import { FaLock, FaEnvelope , FaUnlock ,FaUser } from 'react-icons/fa';
 import { MdOutlineEmail } from "react-icons/md";
 import { LuUser } from "react-icons/lu";
 import { BiHide , BiShow } from "react-icons/bi";
@@ -11,11 +10,10 @@ import { useGlobal } from '@/context/GlobleContext';
 import Header from '@/component/Header';
 import Footer from '@/component/Footer';
 import axiosInstance from '@/lib/axios';
-// import Loginimage from '../../../public/Image123.jpg';
 import { toast } from 'react-toastify';
 
 const Login = () => {
-  const {state , dispatch} = useGlobal();
+  const {state} = useGlobal();
   const {theme} = state;
   const router = useRouter();
   const [form, setForm] = useState({userName:"", email: "", password: "" , confirmPassword:""});
@@ -31,7 +29,7 @@ const handleChange = (e) => {
 
 const handleSubmit = async (e) => {
   e.preventDefault();
-  const { userName, email, password  , confirmPassword} = form;
+  const { userName, email, password, confirmPassword } = form;
 
   if (!email || !password) {
     toast.error("Email and password are required.");
@@ -47,22 +45,14 @@ const handleSubmit = async (e) => {
       password,
       confirmPassword,
     });
-    // console.log(46,response)
     const data = response.data;
-    // if (response.status !== 201) {
-    //   toast.error(data.message || "Login failed");
-    //   return;
-    // }
-    dispatch({ type: "LOGIN", payload: data.user });
-    toast.success(data.message || "Login successful");
-        if(data.user.role === 'admin' ){
-      router.push("/admin"  );
-    }else{
-      router.push("/student");
-    }
+
+    // ✅ Ab yahan auto-login nahi hoga — sirf success message aur login page pe redirect
+    toast.success(data.message || "Signup successful! Please login to continue.");
+    router.push("/login");
+
   } catch (err) {
-    // console.error(56,err.response.data.message);
-    toast.error(err.response.data.message || "Something went wrong. Please try again later.");
+    toast.error(err.response?.data?.message || "Something went wrong. Please try again later.");
   } finally {
     setLoading(false);
   }
