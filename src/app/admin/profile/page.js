@@ -147,7 +147,6 @@ const ProfilePage = () => {
 
       const refreshed = await axiosInstance.get("/api/me");
       const updatedUser = refreshed?.data?.user || data?.user || {};
-      console.log("Updated user data:", updatedUser);
       const nextValues = getProfileFieldValues(updatedUser);
 
       setFormData((current) => ({
@@ -252,8 +251,13 @@ const ProfilePage = () => {
                 <p className="text-base font-semibold text-[#111827]">{adminEmail}</p>
                 <p className="text-sm font-medium capitalize text-[#00000066]">{adminRole}</p>
               </div>
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#275D84] text-lg font-medium text-white shadow-sm">
-                {adminInitials}
+              {/* ✅ Updated: ab uploaded image ya initials dikhayega */}
+              <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full bg-[#275D84] text-lg font-medium text-white shadow-sm">
+                {profilePreview ? (
+                  <img src={profilePreview} alt="Profile" className="h-full w-full object-cover" />
+                ) : (
+                  adminInitials
+                )}
               </div>
             </div>
           </header>
@@ -317,7 +321,6 @@ const ProfilePage = () => {
                       onClick={openProfileModal}
                       aria-label="Enable personal details editing"
                     >
-                      {/* <FiEdit2 className="text-lg" /> */}
                        <img src="/icons/editIcon.svg" alt="Change Password" className="h-6 w-6 cursor-pointer" />
                     </button>
                   </div>
@@ -372,7 +375,6 @@ const ProfilePage = () => {
                   <div className="mb-4 flex items-center justify-between border-b-2  border-gray-300 pb-4">
                     <h2 className="text-[24px] font-semibold text-[#45744F]">Change Password</h2>
                     <button type="button" className="text-[#212121]">
-                      {/* <FiEdit2 className="text-lg" /> */}
                     <img src="/icons/editIcon.svg" alt="Change Password" className="h-6 w-6" />
                     </button>
                   </div>
@@ -510,3 +512,4 @@ const ProfilePage = () => {
 };
 
 export default ProfilePage;
+

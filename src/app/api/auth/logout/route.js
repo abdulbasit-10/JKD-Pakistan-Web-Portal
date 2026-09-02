@@ -7,11 +7,11 @@ export async function POST() {
       { status: 200 }
     );
 
-    
+    // ✅ sameSite login route ke sath match karna zaroori hai (lax)
     res.cookies.set("token", "", {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: "strict",
+      sameSite: "lax",
       path: "/",
       maxAge: 0,
     });
@@ -20,8 +20,9 @@ export async function POST() {
   } catch (error) {
     console.error("Logout error:", error);
 
+    // ⚠️ error.message hataya — internal detail client ko expose nahi karni
     return NextResponse.json(
-      { success: false, message: "Logout failed", error: error.message },
+      { success: false, message: "Logout failed" },
       { status: 500 }
     );
   }
