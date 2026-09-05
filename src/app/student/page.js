@@ -60,23 +60,36 @@ const StudentDashboardPage = () => {
     return "bg-emerald-100 text-emerald-700";
   };
 
+  // const getStudentApplications = async () => {
+  //   try {
+  //     setLoading(true);
+  //     const res = await axiosInstance.get("/api/apply");
+  //     const filteredCourses = res.data.filter((application) => {
+  //       // Handle both populated userId (object with _id) and string userId
+  //       const appUserId = application?.userId?._id || application?.userId;
+  //       const currentUserId = user?.id || user?._id;
+  //       return appUserId === currentUserId;
+  //     });
+  //     setAppliedCourses(filteredCourses);
+  //   } catch (error) {
+  //     console.error("Error fetching student applications:", error);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
   const getStudentApplications = async () => {
-    try {
-      setLoading(true);
-      const res = await axiosInstance.get("/api/apply");
-      const filteredCourses = res.data.filter((application) => {
-        // Handle both populated userId (object with _id) and string userId
-        const appUserId = application?.userId?._id || application?.userId;
-        const currentUserId = user?.id || user?._id;
-        return appUserId === currentUserId;
-      });
-      setAppliedCourses(filteredCourses);
-    } catch (error) {
-      console.error("Error fetching student applications:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
+  try {
+    setLoading(true);
+    // ✅ Ab server khud filter karta hai, client-side filtering ki zarurat nahi
+    const res = await axiosInstance.get("/api/apply/my");
+    setAppliedCourses(res.data);
+  } catch (error) {
+    console.error("Error fetching student applications:", error);
+  } finally {
+    setLoading(false);
+  }
+};
 
   const handleUploadChallan = async (event, applicationId) => {
     const file = event.target.files?.[0];
@@ -290,26 +303,21 @@ const StudentDashboardPage = () => {
                       <p className="text-base text-[#000000] leading-relaxed mb-5 flex-grow">
                         {application.description || "Master the skills and knowledge required for this course through comprehensive learning and hands-on practice."}
                       </p>
-                    <div className="flex justify-around">  
+                    {/* <div className="flex justify-around">  
                       {/* Learn More Button */}
-                      <Link href={`/student/Challan/${application._id}`} className="w-[40%] h-[39px] bg-[#d97706] hover:bg-[#b45309] active:bg-[#92400e] text-white text-[11px] font-medium py-4 px-4 rounded-lg cursor-pointer transition-colors text-xs flex items-center justify-center gap-2">
+                      {/* <Link href={`/student/Challan/${application._id}`} className="w-[40%] h-[39px] bg-[#d97706] hover:bg-[#b45309] active:bg-[#92400e] text-white text-[11px] font-medium py-4 px-4 rounded-lg cursor-pointer transition-colors text-xs flex items-center justify-center gap-2">
                         Generate Challan
-                        {/* <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg> */}
                        < FaArrowRight />
-                      </Link>
+                      </Link> */}
                       {/* upload challan */}
-                      <div className="relative">
+                      {/* <div className="relative">
                         <button
                           onClick={() => document.getElementById(`challan-upload-${application._id}`)?.click()}
                           disabled={uploadingId === application._id}
                           className="w-[80%] h-[39px] bg-[#d97706] hover:bg-[#b45309] active:bg-[#92400e] text-white text-[11px] font-medium py-4 px-4 rounded-lg cursor-pointer transition-colors text-xs flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                           {uploadingId === application._id ? "Uploading..." : "Upload Challan"}
-                          {/* <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                          </svg> */}< FaArrowRight />
+                         < FaArrowRight />
                         </button>
                         <input
                           id={`challan-upload-${application._id}`}
@@ -318,8 +326,8 @@ const StudentDashboardPage = () => {
                           onChange={(e) => handleUploadChallan(e, application._id)}
                           className="hidden"
                         />
-                      </div>
-                    </div>
+                      </div> */}
+                    {/* </div> */}
                     </div>
                   </article>
                 ))}
@@ -346,3 +354,4 @@ const StatCard = ({ title, value, caption, valueClass, iconBg, icon, borderColor
 );
 
 export default StudentDashboardPage;
+

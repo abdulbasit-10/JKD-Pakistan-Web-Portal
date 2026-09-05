@@ -1,4 +1,5 @@
 ﻿import nodemailer from "nodemailer";
+import { isValidEmail, isValidPhone, isValidText, escapeHtml } from "@/lib/validators";
 
 export async function POST(req) {
   try {
@@ -7,6 +8,42 @@ export async function POST(req) {
     if (!email || !phoneNumber || !message) {
       return new Response(
         JSON.stringify({ success: false, error: "Email, phone number, and message are required." }),
+        { status: 400 }
+      );
+    }
+
+    // ✅ Regex validation
+    if (!isValidEmail(email)) {
+      return new Response(
+        JSON.stringify({ success: false, error: "Invalid email address." }),
+        { status: 400 }
+      );
+    }
+
+    if (!isValidPhone(phoneNumber)) {
+      return new Response(
+        JSON.stringify({ success: false, error: "Phone number must be 10-15 digits." }),
+        { status: 400 }
+      );
+    }
+
+    if (userName && !isValidText(userName, 2, 80)) {
+      return new Response(
+        JSON.stringify({ success: false, error: "Name must be between 2 and 80 characters." }),
+        { status: 400 }
+      );
+    }
+
+    if (!isValidText(message, 5, 2000)) {
+      return new Response(
+        JSON.stringify({ success: false, error: "Message must be between 5 and 2000 characters." }),
+        { status: 400 }
+      );
+    }
+
+    if (subject && !isValidText(subject, 2, 150)) {
+      return new Response(
+        JSON.stringify({ success: false, error: "Subject must be between 2 and 150 characters." }),
         { status: 400 }
       );
     }
@@ -24,7 +61,6 @@ export async function POST(req) {
     const senderName = (userName || "Website Visitor").trim();
     const safeSubject = (subject || "New Contact Form Submission").trim();
 
-    // Create transporter (use your own SMTP credentials)
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
       port: 465,
@@ -35,42 +71,19 @@ export async function POST(req) {
       },
     });
 
-    // Send email
+    // ✅ escapeHtml se HTML injection se bachaya
     await transporter.sendMail({
-      from: `"${senderName}" <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_USER, // receiver
+      from: `"${escapeHtml(senderName)}" <${process.env.EMAIL_USER}>`,
+      to: process.env.EMAIL_USER,
       subject: safeSubject,
       text: message,
-      html: `<p><b>Name:</b> ${senderName}</p><p><b>Email:</b> ${email}</p><p><b>Number:</b> ${phoneNumber}</p><p>${message}</p>`,
+      html: `<p><b>Name:</b> ${escapeHtml(senderName)}</p><p><b>Email:</b> ${escapeHtml(email)}</p><p><b>Number:</b> ${escapeHtml(phoneNumber)}</p><p>${escapeHtml(message)}</p>`,
     });
 
     return new Response(JSON.stringify({ success: true, message: "Email sent successfully" }), { status: 200 });
   } catch (error) {
     console.error("Error sending email:", error);
-    const errorMessage = error?.message || "Failed to send email.";
-    return new Response(JSON.stringify({ success: false, error: errorMessage }), { status: 500 });
+    // ⚠️ error.message leak hataya
+    return new Response(JSON.stringify({ success: false, error: "Failed to send email." }), { status: 500 });
   }
 }
-
-
-// this can be also done using below code but it need resend library and resend api key 
-
-
-
-// // app/api/send-mail/route.js
-// import { Resend } from "resend";
-
-// const resend = new Resend(process.env.RESEND_API_KEY);
-
-// export async function POST(req) {
-//   const { name, email, message } = await req.json();
-
-//   await resend.emails.send({
-//     from: "Your App <onboarding@resend.dev>",
-//     to: "your@gmail.com",
-//     subject: `Message from ${name}`,
-//     html: `<p>${message}</p>`,
-//   });
-
-//   return new Response(JSON.stringify({ success: true }), { status: 200 });
-// }

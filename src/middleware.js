@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { jwtVerify } from "jose"; // ✅ jsonwebtoken ki jagah jose
+import { jwtVerify } from "jose";
 
 const PUBLIC_SUBMISSION_ROUTES = [
   "/api/apply",
@@ -16,9 +16,17 @@ function isPublicSubmission(pathname, method) {
   return PUBLIC_SUBMISSION_ROUTES.includes(pathname);
 }
 
+// ✅ Ye exact paths kisi bhi logged-in user (student ya admin) ko allow hain
+const AUTHENTICATED_ONLY_EXACT = ["/api/apply/my", "/api/me"];
+
+// ✅ Challan ko ID se fetch karna (jaise /api/challan/68abc123...) — authenticated user ke liye allow,
+// ownership check khud route ke andar hoga
+function isChallanIdRoute(pathname) {
+  return /^\/api\/challan\/[a-f\d]{24}$/i.test(pathname);
+}
+
 const ADMIN_ONLY_PREFIXES = ["/api/apply", "/api/booking", "/api/users", "/api/challan"];
 
-// ✅ jose ko secret Uint8Array format mein chahiye hota hai
 const secret = new TextEncoder().encode(process.env.TOKEN_SECRET);
 
 export async function middleware(req) {
@@ -36,7 +44,7 @@ export async function middleware(req) {
   }
 
   try {
-    const { payload: decoded } = await jwtVerify(token, secret); // ✅ jose ka verify
+    const { payload: decoded } = await jwtVerify(token, secret);
 
     const requestHeaders = new Headers(req.headers);
     requestHeaders.set("x-user-id", decoded.sub || "");
@@ -45,7 +53,13 @@ export async function middleware(req) {
     requestHeaders.set("x-user-token", token);
 
     const isAdminPage = pathname.startsWith("/admin");
-    const isAdminApi = ADMIN_ONLY_PREFIXES.some((prefix) => pathname.startsWith(prefix));
+
+    const isExemptFromAdminCheck =
+      AUTHENTICATED_ONLY_EXACT.includes(pathname) || isChallanIdRoute(pathname);
+
+    const isAdminApi =
+      ADMIN_ONLY_PREFIXES.some((prefix) => pathname.startsWith(prefix)) &&
+      !isExemptFromAdminCheck;
 
     if ((isAdminPage || isAdminApi) && decoded.role !== "admin") {
       return NextResponse.json({ error: "Forbidden" }, { status: 403 });
@@ -86,3 +100,4 @@ export const config = {
     "/api/me",
   ],
 };
+

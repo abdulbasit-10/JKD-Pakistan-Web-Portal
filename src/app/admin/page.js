@@ -278,13 +278,13 @@ const App = () => {
                 {
                         title: "Total Users",
                         value: totalUsers.toLocaleString(),
-                    subtext: formatMoMChange(currentMonthUsers, previousMonthUsers),
+                    // subtext: formatMoMChange(currentMonthUsers, previousMonthUsers), // ✅ Comment out kiya
                         accentClass: "bg-[#0d4f7c]",
                 },
                 {
                         title: "Applications This Month",
                         value: thisMonthApplications.toLocaleString(),
-                    subtext: formatMoMChange(currentMonthApplications, previousMonthApplications),
+                    // subtext: formatMoMChange(currentMonthApplications, previousMonthApplications), // ✅ Comment out kiya
                         accentClass: "bg-[#174f78]",
                 },
                 {
@@ -462,3 +462,4 @@ const App = () => {
 };
 
 export default App;
+

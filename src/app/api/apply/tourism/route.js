@@ -2,9 +2,7 @@ import { NextResponse } from "next/server";
 import { connectDB } from "@/lib/dbConnect";
 import TourismApplication from "@/models/tourismApplicationModel";
 import { uploadImageToCloudinary } from "@/lib/cloudinary";
-
-const ALLOWED_TYPES = ["image/jpeg", "image/png", "image/webp", "application/pdf"];
-const MAX_SIZE_BYTES = 5 * 1024 * 1024;
+import { isValidName, isValidEmail, isValidPhone, isValidCNIC, validateFile } from "@/lib/validators";
 
 export async function GET(request) {
   try {
@@ -40,25 +38,27 @@ export async function POST(request) {
       !packageId || !packageTitle || !name || !fatherName || !cnic ||
       !phoneNumber || !email || !numberOfPersons || !preferredTravelDate || !applicationDocument
     ) {
-      return NextResponse.json(
-        { error: "All fields are required, including the uploaded document." },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: "All fields are required, including the uploaded document." }, { status: 400 });
     }
 
-    if (typeof applicationDocument === "string") {
-      return NextResponse.json({ error: "Please upload a valid document file." }, { status: 400 });
+    // ✅ Regex validation
+    if (!isValidName(name) || !isValidName(fatherName)) {
+      return NextResponse.json({ error: "Names must be valid (letters only, 2-80 chars)" }, { status: 400 });
+    }
+    if (!isValidEmail(email)) {
+      return NextResponse.json({ error: "Invalid email address" }, { status: 400 });
+    }
+    if (!isValidPhone(phoneNumber)) {
+      return NextResponse.json({ error: "Phone number must be 10-15 digits" }, { status: 400 });
+    }
+    if (!isValidCNIC(cnic)) {
+      return NextResponse.json({ error: "CNIC must be a valid 13-digit number" }, { status: 400 });
     }
 
-    // ✅ File validation add ki
-    if (!ALLOWED_TYPES.includes(applicationDocument.type)) {
-      return NextResponse.json(
-        { error: "Only JPG, PNG, WEBP or PDF files are allowed" },
-        { status: 400 }
-      );
-    }
-    if (applicationDocument.size > MAX_SIZE_BYTES) {
-      return NextResponse.json({ error: "Document must be under 5MB" }, { status: 400 });
+    // ✅ File validation
+    const fileCheck = validateFile(applicationDocument);
+    if (!fileCheck.valid) {
+      return NextResponse.json({ error: fileCheck.error }, { status: 400 });
     }
 
     const rawBuffer = await applicationDocument.arrayBuffer();
@@ -84,6 +84,6 @@ export async function POST(request) {
     );
   } catch (error) {
     console.error("POST /api/apply/tourism error:", error);
-    return NextResponse.json({ error: "Unable to submit application." }, { status: 500 }); // detail hataya
+    return NextResponse.json({ error: "Unable to submit application." }, { status: 500 });
   }
 }

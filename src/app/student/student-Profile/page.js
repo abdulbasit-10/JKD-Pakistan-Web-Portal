@@ -28,27 +28,46 @@ const StudentProfilePage = () => {
     return parsedDate.toISOString().split("T")[0];
   };
 
+  // const getStudentApplications = async () => {
+  //   try {
+  //     setLoading(true);
+  //     const res = await axiosInstance.get("/api/apply");
+  //     const filteredCourses = res.data.filter(
+  //       (application) => application?.userId?._id === user?.id
+  //     );
+  //     setAppliedCourses(filteredCourses);
+  //     // Get the latest application to display in profile
+  //     if (filteredCourses.length > 0) {
+  //       const latest = filteredCourses.sort(
+  //         (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+  //       )[0];
+  //       setLatestApplication(latest);
+  //     }
+  //   } catch (error) {
+  //     console.error("Error fetching student applications:", error);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
   const getStudentApplications = async () => {
-    try {
-      setLoading(true);
-      const res = await axiosInstance.get("/api/apply");
-      const filteredCourses = res.data.filter(
-        (application) => application?.userId?._id === user?.id
-      );
-      setAppliedCourses(filteredCourses);
-      // Get the latest application to display in profile
-      if (filteredCourses.length > 0) {
-        const latest = filteredCourses.sort(
-          (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
-        )[0];
-        setLatestApplication(latest);
-      }
-    } catch (error) {
-      console.error("Error fetching student applications:", error);
-    } finally {
-      setLoading(false);
+  try {
+    setLoading(true);
+    // ✅ Ab server khud filter karta hai
+    const res = await axiosInstance.get("/api/apply/my");
+    setAppliedCourses(res.data);
+    if (res.data.length > 0) {
+      const latest = [...res.data].sort(
+        (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+      )[0];
+      setLatestApplication(latest);
     }
-  };
+  } catch (error) {
+    console.error("Error fetching student applications:", error);
+  } finally {
+    setLoading(false);
+  }
+};
 
   useEffect(() => {
     if (!user || user?.role !== "student") {

@@ -2,29 +2,16 @@ import { NextResponse } from "next/server";
 import { connectDB } from "@/lib/dbConnect";
 import Job from "@/models/jobModel";
 import { uploadImageToCloudinary } from "@/lib/cloudinary";
-
-const ALLOWED_TYPES = ["image/jpeg", "image/png", "image/webp", "application/pdf"];
-const MAX_SIZE_BYTES = 5 * 1024 * 1024; // 5MB
+import { isValidName, isValidEmail, isValidPhone, isValidCNIC, validateFile } from "@/lib/validators";
 
 export async function POST(request) {
   try {
     await connectDB();
     const formData = await request.formData();
     const {
-      fullName,
-      fatherName,
-      email,
-      gender,
-      whatsappNumber,
-      contactNumber,
-      cnic,
-      fatherCnic,
-      dateOfBirth,
-      province,
-      district,
-      tehsil,
-      appliedPosition,
-      paymentMethod,
+      fullName, fatherName, email, gender, whatsappNumber, contactNumber,
+      cnic, fatherCnic, dateOfBirth, province, district, tehsil,
+      appliedPosition, paymentMethod,
     } = Object.fromEntries(formData);
 
     const cnicPictureFile = formData.get("cnicPicture");
@@ -41,24 +28,27 @@ export async function POST(request) {
       return NextResponse.json({ error: "All required fields must be filled" }, { status: 400 });
     }
 
-    // ✅ Har uploaded file ka type/size validate karo
-    const filesToCheck = [
-      cnicPictureFile, latestQualificationPictureFile,
-      passportSizePhotographFile, paidChallanFileFile, resumeFile,
-    ];
+    // ✅ Regex validation
+    if (!isValidName(fullName) || !isValidName(fatherName)) {
+      return NextResponse.json({ error: "Names must be valid (letters only, 2-80 chars)" }, { status: 400 });
+    }
+    if (!isValidEmail(email)) {
+      return NextResponse.json({ error: "Invalid email address" }, { status: 400 });
+    }
+    if (!isValidPhone(whatsappNumber) || !isValidPhone(contactNumber)) {
+      return NextResponse.json({ error: "Phone numbers must be 10-15 digits" }, { status: 400 });
+    }
+    if (!isValidCNIC(cnic) || !isValidCNIC(fatherCnic)) {
+      return NextResponse.json({ error: "CNIC must be a valid 13-digit number" }, { status: 400 });
+    }
+
+    // ✅ File validation — .txt aur invalid types reject
+    const filesToCheck = [cnicPictureFile, latestQualificationPictureFile, passportSizePhotographFile, paidChallanFileFile, resumeFile];
     for (const file of filesToCheck) {
       if (file && typeof file !== "string") {
-        if (!ALLOWED_TYPES.includes(file.type)) {
-          return NextResponse.json(
-            { error: "Only JPG, PNG, WEBP or PDF files are allowed" },
-            { status: 400 }
-          );
-        }
-        if (file.size > MAX_SIZE_BYTES) {
-          return NextResponse.json(
-            { error: "Each file must be under 5MB" },
-            { status: 400 }
-          );
+        const result = validateFile(file);
+        if (!result.valid) {
+          return NextResponse.json({ error: result.error }, { status: 400 });
         }
       }
     }
@@ -98,7 +88,6 @@ export async function POST(request) {
     );
   } catch (err) {
     console.error("POST /api/apply/job error:", err);
-
     if (err.code === 11000) {
       const field = Object.keys(err.keyPattern)[0];
       const userMessage = field === "email"
@@ -106,8 +95,6 @@ export async function POST(request) {
         : "An application with this information already exists.";
       return NextResponse.json({ error: userMessage }, { status: 409 });
     }
-
-    // ⚠️ err.message hataya — internal details expose nahi karni
     return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
 }
