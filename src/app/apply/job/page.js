@@ -136,9 +136,9 @@ const Apply = () => {
         appliedPosition: appliedPositionOptions[0],
         totalExperience: '',
         resume: '',
-        linkedinProfile: '',
-        portfolio: '',
-        coverLetter: ''
+        // linkedinProfile: '',
+        // portfolio: '',
+        // coverLetter: ''
     })
     const [loading, setLoading] = useState(false);
     const [isDraggingResume, setIsDraggingResume] = useState(false);
@@ -193,9 +193,9 @@ const Apply = () => {
                 appliedPosition: appliedPositionOptions[0],
                 totalExperience: '',
                 resume: '',
-                linkedinProfile: '',
-                portfolio: '',
-                coverLetter: ''
+                // linkedinProfile: '',
+                // portfolio: '',
+                // coverLetter: ''
             });
             toast.success(      data.message || "Login successful");
 
@@ -258,23 +258,23 @@ const Apply = () => {
                 {/* full name and email */}
                 <div className='flex w-full flex-col gap-5 pt-8 md:flex-row'>
                     <div className='flex w-full flex-col gap-3 md:w-1/2'>
-                        <label htmlFor="name" className='font-semibold text-sm md:text-lg '>Full Name <span className="text-white bg-[#dc3545] text-xs px-2 py-0.5 rounded">* Required</span></label>
+                        <label htmlFor="name" className='font-semibold text-sm md:text-lg '>Full Name <span className="text-red-600 text-xs px-2 py-0.5 rounded">*</span></label>
                         <input id='name' type='text' name='fullName' onChange={handleChange} value={applyForm.fullName} placeholder='Name' className={fieldClassName} required />
                     </div>
                     <div className='flex w-full flex-col gap-3 md:w-1/2'>
-                        <label htmlFor='fName' className='text-sm md:text-lg font-semibold'>Email <span className="text-white bg-[#dc3545] text-xs px-2 py-1 rounded">* Required</span></label>
+                        <label htmlFor='fName' className='text-sm md:text-lg font-semibold'>Email <span className="text-red-600 text-xs px-2 py-1 rounded">*</span></label>
                         <input id='fName' type='email' name='email' onChange={handleChange} value={applyForm.email} placeholder='Email' className={fieldClassName} required />
                     </div>
                 </div>
                 {/* contac number and location */}
                 <div className='flex w-full flex-col gap-5 pt-5 md:flex-row'>
                     <div className='flex w-full flex-col gap-3 md:w-1/2'>
-                        <label className='text-sm md:text-lg font-semibold'>Contact Number <span className="text-white bg-[#dc3545] text-xs px-2 py-0.5 rounded">* Required</span></label>
+                        <label className='text-sm md:text-lg font-semibold'>Contact Number <span className="text-red-600 text-xs px-2 py-0.5 rounded">*</span></label>
                         {/* <span className='text-gray-500 text-xs'>+92</span> */}
                         <input type='number' name='contactNumber' onChange={handleChange} value={applyForm.contactNumber} placeholder='Contact Number' className={fieldClassName} required />
                     </div>
                     <div className='flex w-full flex-col gap-3 md:w-1/2'>
-                        <label className='text-sm md:text-lg font-semibold'>Location <span className="text-white bg-[#dc3545] text-xs px-2 py-0.5 rounded">* Required</span></label>
+                        <label className='text-sm md:text-lg font-semibold'>Location <span className="text-red-600 text-xs px-2 py-0.5 rounded">*</span></label>
                         <input type='text' name='location' onChange={handleChange} value={applyForm.location} placeholder='Location' className={fieldClassName} required />
                     </div>
                 </div>
@@ -287,16 +287,16 @@ const Apply = () => {
                 {/* current job and total experience */}
                 <div className='flex w-full flex-col gap-5 pt-5 md:flex-row'>
                     <div className='flex w-full flex-col gap-3 md:w-1/2'>
-                        <label className='text-sm md:text-lg font-semibold'>Current Job Title <span className="text-white bg-[#dc3545] text-xs px-2 py-0.5 rounded">* Required</span></label>
+                        <label className='text-sm md:text-lg font-semibold'>Current Job Title <span className="text-red-600 text-xs px-2 py-0.5 rounded">*</span></label>
                         <input type='text' name='currentJobTitle' onChange={handleChange} value={applyForm.currentJobTitle} placeholder='Job ' className={fieldClassName} required />
                     </div>
                     <div className='flex w-full flex-col gap-3 md:w-1/2'>
-                        <label className='text-sm md:text-lg font-semibold'>Total Expericence <span className="text-white bg-[#dc3545] text-xs px-2 py-0.5 rounded">* Required</span></label>
+                        <label className='text-sm md:text-lg font-semibold'>Total Experience <span className="text-red-600 text-xs px-2 py-0.5 rounded">*</span></label>
                         <input type='number' name='totalExperience' onChange={handleChange} value={applyForm.totalExperience} placeholder='Experience' className={fieldClassName} required />
                     </div>
                 </div>
                 <div className='flex w-full md:w-1/2 self-start flex-col gap-3 pt-5'>
-                    <label className='text-sm md:text-lg font-semibold'>Applied Position <span className="text-white bg-[#dc3545] text-xs px-2 py-0.5 rounded">* Required</span></label>
+                    <label className='text-sm md:text-lg font-semibold'>Applied Position <span className="text-red-600 text-xs px-2 py-0.5 rounded">*</span></label>
                     <select
                         name='appliedPosition'
                         onChange={handleChange}
@@ -311,7 +311,7 @@ const Apply = () => {
                 </div>
                 {/* Resume */}
                 <div className='flex w-full flex-col gap-3 pt-5'>
-                    <label htmlFor='resume' className='text-sm md:text-lg font-semibold'>Resume <span className="text-white bg-[#dc3545] text-xs px-2 py-1 rounded">* Required</span></label>
+                    <label htmlFor='resume' className='text-sm md:text-lg font-semibold'>Resume <span className="text-red-600 text-xs px-2 py-1 rounded">*</span></label>
                     <div
                         onDragOver={(event) => {
                             event.preventDefault();
@@ -409,11 +409,11 @@ const Apply = () => {
 
 
                 {/* optional */}
-                <h3 className=' text-[17px] md:text-[21px] lg:text-[25px] font-semibold w-full  pt-10'>
+                {/* <h3 className=' text-[17px] md:text-[21px] lg:text-[25px] font-semibold w-full  pt-10'>
                     Optional
-                </h3>
+                </h3> */}
                 {/* current job and total experience */}
-                <div className='flex w-full flex-col gap-5 pt-5 md:flex-row'>
+                {/* <div className='flex w-full flex-col gap-5 pt-5 md:flex-row'>
                     <div className='flex w-full flex-col gap-3 md:w-1/2'>
                         <label className='text-sm md:text-lg font-semibold'>Linkedin Profile</label>
                         <input type='url' name='linkedinProfile' onChange={handleChange} value={applyForm.linkedinProfile} placeholder='linkedin profile url ' className={fieldClassName} />
@@ -422,13 +422,13 @@ const Apply = () => {
                         <label className='text-sm md:text-lg font-semibold'>Portfolio</label>
                         <input type='url' name='portfolio' onChange={handleChange} value={applyForm.portfolio} placeholder='portfolio url' className={fieldClassName} />
                     </div>
-                </div>
+                </div> */}
                 {/* Resume */}
-                <div className='flex w-full flex-col gap-3 pt-5'>
+                {/* <div className='flex w-full flex-col gap-3 pt-5'>
                     <label htmlFor='cLetter' className='text-sm md:text-lg font-semibold'>Cover Letter</label>
                     <textarea id='cLetter' name='coverLetter' rows={1} value={applyForm.coverLetter} onChange={handleChange} className={fieldClassName} placeholder='text' >
                     </textarea>
-                </div>
+                </div> */}
 
 
                 <div className='flex w-full items-center justify-center pt-10'>

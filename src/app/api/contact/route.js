@@ -12,7 +12,6 @@ export async function POST(req) {
       );
     }
 
-    // ✅ Regex validation
     if (!isValidEmail(email)) {
       return new Response(
         JSON.stringify({ success: false, error: "Invalid email address." }),
@@ -65,13 +64,13 @@ export async function POST(req) {
       host: "smtp.gmail.com",
       port: 465,
       secure: true,
+      family: 4, // ✅ IPv6 timeout se bachne ke liye
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
     });
 
-    // ✅ escapeHtml se HTML injection se bachaya
     await transporter.sendMail({
       from: `"${escapeHtml(senderName)}" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
@@ -83,7 +82,6 @@ export async function POST(req) {
     return new Response(JSON.stringify({ success: true, message: "Email sent successfully" }), { status: 200 });
   } catch (error) {
     console.error("Error sending email:", error);
-    // ⚠️ error.message leak hataya
     return new Response(JSON.stringify({ success: false, error: "Failed to send email." }), { status: 500 });
   }
 }

@@ -33,11 +33,11 @@ import { useGlobal } from '@/context/GlobleContext';
     async function applyApiCall() {
       try {
         const response = await axiosInstance.get('/api/apply/tourism');
-        console.log(response.data);
+        // console.log(response.data);
         setLoading(false);
         setData(response.data);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
         if (error.status === 401) {
           router.push('/login');
           toast.error('Unauthorized login again');

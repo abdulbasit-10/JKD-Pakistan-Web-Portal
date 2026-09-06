@@ -9,6 +9,7 @@ const PUBLIC_SUBMISSION_ROUTES = [
   "/api/challan/upload",
   "/api/contact",
   "/api/users/signup",
+  "/api/events", // ✅ Add kiya
 ];
 
 function isPublicSubmission(pathname, method) {
@@ -25,7 +26,7 @@ function isChallanIdRoute(pathname) {
   return /^\/api\/challan\/[a-f\d]{24}$/i.test(pathname);
 }
 
-const ADMIN_ONLY_PREFIXES = ["/api/apply", "/api/booking", "/api/users", "/api/challan"];
+const ADMIN_ONLY_PREFIXES = ["/api/apply", "/api/booking", "/api/users", "/api/challan", "/api/events" ];
 
 const secret = new TextEncoder().encode(process.env.TOKEN_SECRET);
 
