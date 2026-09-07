@@ -173,7 +173,7 @@ const Apply = () => {
         for (let field in applyForm) {
             formData.append(field, applyForm[field]);
         }
-        console.log(applyForm)
+        // console.log(applyForm)
         //   const {firstName,lastName,email,dateOfBirth,phoneNumber,address,CNIC,parentCNIC,age,gender,program,subProgram} = applyForm;
 
         setLoading(true);
@@ -181,7 +181,7 @@ const Apply = () => {
             const response = await axiosInstance.post("/api/apply/job", formData, {
                 headers: { "Content-Type": "multipart/form-data" }
             });
-            console.log(response);
+            // console.log(response);
             const data = response.data;
 
             setApplyForm({
@@ -332,7 +332,7 @@ const Apply = () => {
                             </div>
                             <div className='min-w-0 '>
                                 <p className='text-[14px] sm:text-[15px] text-[#222] leading-5'>Drag And Drop Files Here Or Upload</p>
-                                <p className='text-[12px] text-gray-500 leading-5'>Accepted file types: PNG, PDF</p>
+                                <p className='text-[12px] text-gray-500 leading-5'>Accepted file types: PNG, JPG, JPEG</p>
                                 {applyForm.resume && (
                                     <p className='text-[12px] text-[#4A709F] truncate'>Selected: {applyForm.resume.name}</p>
                                 )}
@@ -353,7 +353,7 @@ const Apply = () => {
                         type='file'
                         name='resume'
                         onChange={handleChange}
-                        accept='.png,.pdf'
+                        accept='.png,.jpeg,.jpg'
                         className='hidden'
                         required
                     />

@@ -10,13 +10,13 @@ const TourismHero = ({params}) => {
   
   const heroContent = heroData.find((item) => item.path === params?.category);
   const backgroundImage = heroContent?.image || "/tourismHero.png";
-  console.log(backgroundImage);
+  // console.log(backgroundImage);
   tourismCards = heroContent?.tourismsIds? heroContent.tourismsIds.map((id) => {
     return cards.find((card) => card.id === id);
   }) : tourismCards;
 
-  console.log("TourismHero params:", params?.category);
-  console.log("TourismHero tourismCards:", tourismCards);
+  // console.log("TourismHero params:", params?.category);
+  // console.log("TourismHero tourismCards:", tourismCards);
 
   return (
     <>

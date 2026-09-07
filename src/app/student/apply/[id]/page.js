@@ -248,14 +248,14 @@ const handleSubmit = async (e) => {
       formData.append(field , applyForm[field]);
     }
   }
-  console.log(applyForm)
+//   console.log(applyForm)
   
   setLoading(true);
   try {
     const response = await axiosInstance.post("/api/apply", formData , {
       headers: { "Content-Type": "multipart/form-data" }
     });
-    console.log(response);
+    // console.log(response);
     const data = response.data;
 
     toast.success(data.message || "Login successful");
@@ -282,7 +282,7 @@ const handleSubmit = async (e) => {
     router.push("/student");
 
   } catch (err) {
-    console.log("catch block", err)
+    // console.log("catch block", err)
     const errorMessage = err.response?.data?.error || "Something went wrong. Please try again.";
     toast.error(errorMessage);
   } finally {
@@ -510,7 +510,7 @@ const handleSubmit = async (e) => {
                       <DocumentUploadBox id='passportSizePic' label='Passport Size Photograph' name='passportSizePic' required value={applyForm.passportSizePic} onChange={handleChange} />
                       {errors.passportSizePic && <p className='text-xs text-[#E82646]'>{errors.passportSizePic}</p>}
                   </div>
-                  <DocumentUploadBox id='passport' label='Passport (optional)' name='passport' value={applyForm.passport} onChange={handleChange} />
+                  {/* <DocumentUploadBox id='passport' label='Passport (optional)' name='passport' value={applyForm.passport} onChange={handleChange} /> */}
               </div>    
 
               <div className='w-full flex justify-center pt-6'>

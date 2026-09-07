@@ -263,7 +263,7 @@ const handleSubmit = async (e) => {
       formData.append(field , applyForm[field]);
     }
   }
-  console.log(applyForm)
+//   console.log(applyForm)
 //   const {firstName,lastName,email,dateOfBirth,phoneNumber,address,CNIC,parentCNIC,age,gender,program,subProgram} = applyForm;
   
   setLoading(true);
@@ -271,14 +271,14 @@ const handleSubmit = async (e) => {
     const response = await axiosInstance.post("/api/apply", formData , {
       headers: { "Content-Type": "multipart/form-data" }
     });
-    console.log(response);
+    // console.log(response);
     const data = response.data;
 
     toast.success(data.message || "Login successful");
 
     router.push("/student");
   } catch (err) {
-    console.log("catch block", err)
+    // console.log("catch block", err)
     const errorMessage = err.response?.data?.error || "Something went wrong. Please try again.";
     toast.error(errorMessage);
   } finally {

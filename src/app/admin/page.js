@@ -164,7 +164,7 @@ const App = () => {
 
     const data = async () => {
         try {
-        console.log("Fetching data...");
+        // console.log("Fetching data..."); // ✅ Comment kiya
         const now = new Date();
         const currentMonth = now.getMonth();
         const currentYear = now.getFullYear();
@@ -174,8 +174,8 @@ const App = () => {
             axiosInstance.get("/api/apply"),
             axiosInstance.get("/api/booking"),
         ]);
-        console.log("application" , applications.data);
-        console.log("bookings" , bookings.data);
+        // console.log("application" , applications.data); // ✅ Comment kiya
+        // console.log("bookings" , bookings.data); // ✅ Comment kiya
 
         // Filter users (remove admins)
         const fileteredUsers = users.data.filter(u => u.role !== 'admin');
@@ -204,7 +204,7 @@ const App = () => {
         dispatch({ type: "SET_FILTERED_BOOKINGS", payload: filteredBookings });
 
         } catch (error) {
-            console.log("Error fetching data:", error);
+            // console.log("Error fetching data:", error); // ✅ Comment kiya
         }
     };
 

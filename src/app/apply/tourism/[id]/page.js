@@ -3,7 +3,7 @@
 import { use, useState } from 'react'
 import Footer from '@/component/Footer'
 import Header from '@/component/Header'
-import { tripDetails } from '@/data/tourism.json'
+import tourismData from '@/data/tourism.json'  // ✅ Fix — default import
 import Image from 'next/image'
 import Link from 'next/link'
 import TourismApplyFormClient from './TourismApplyFormClient'
@@ -11,7 +11,7 @@ import TourismApplyFormClient from './TourismApplyFormClient'
 export default function TourismApplyPage({ params }) {
     const { id } = use(params)
     const packageId = String(id)
-    const trip = tripDetails[packageId]
+    const trip = tourismData.tripDetails[packageId]
     const [successData, setSuccessData] = useState(null)
 
     if (!trip) {
