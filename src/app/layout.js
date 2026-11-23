@@ -10,8 +10,8 @@ const notoSans = Noto_Sans({
 
 
 export const metadata = {
-  title: "JKD",
-  description: "Orginazation",
+  title: "JKD Pakistan",
+  description: "Organization",
 };
 
 export default function RootLayout({ children }) {
